@@ -1,7 +1,7 @@
 const options = {
     aroma: "Pleasing smell",
     pepper: "Salt's partner",
-    halt: "put a stop to",
+    halt: "Put a stop to",
     jump: "Rise suddenly",
     shuffle: "Mix cards up",
     combine: "Add; Mix",
@@ -10,6 +10,12 @@ const options = {
     disturb: "Interrupt; upset ",
     shift: "Move; Period of word",
     machine: "Device or appliance",
+    sushi: "Salmon over rice",
+    champagne: "Snazzy sparkling drink",
+    camembert: "Circular cheese",
+    sheep: "Fluffy animal",
+    eclipse: "Stars hiding each other",
+    grenade: "Throwable explosive device"
 }
 
 //Initial References
