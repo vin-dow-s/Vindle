@@ -15,10 +15,18 @@ const options = {
     camembert: "Circular cheese",
     sheep: "Fluffy animal",
     eclipse: "Stars hiding each other",
-    grenade: "Throwable explosive device"
+    grenade: "Throwable explosive device",
+    jackpot: "Big win",
+    opera: "Ballet; cake",
+    chicken: "Feathers with feet",
+    unsupportive: "Megan's attitude",
+    baguette: "A bag of uettes...",
+    marvelous: "Qualifier for this game",
+    buzz: "Bee's sound"
 }
 
 //Initial References
+const body = document.querySelector("body");
 const message = document.getElementById("message");
 const hintRef = document.querySelector(".hint-ref");
 const controls = document.querySelector(".controls-container");
@@ -32,6 +40,8 @@ let randomWord = "",
     randomHint = "";
 let winCount = 0,
     lossCount = 0;
+
+let intervals = [];
 
 //Generate random value
 const generateRandomValue = (array) => Math.floor(Math.random() * array.length);
@@ -115,8 +125,14 @@ const init = () => {
 
                         //If winCount equals word length
                         if (winCount === charArray.length) {
+                            const intervalId = setInterval(createHeart, 100);
+
                             resultText.innerHTML = "You Won !!!!!";
                             startBtn.innerText = "Restart";
+
+                            setTimeout(() => {
+                                clearInterval(intervalId);
+                            }, 3000);
 
                             //block all buttons
                             blocker();
@@ -149,4 +165,12 @@ const init = () => {
 
 window.onload = () => {
     init();
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "fas fa-heart";
+    heart.style.left = (Math.random() * 100) + "vw";
+    heart.style.animationDuration = (Math.random() * 3) + 2 + "s"
+    body.appendChild(heart);
 }

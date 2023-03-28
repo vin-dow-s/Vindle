@@ -6,7 +6,23 @@
 }
 body {
   background-color: #DCD0FF;
+  overflow: hidden;
+  z-index: 1;
 }
+
+#Vindle {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-family: "Alex Brush", sans-serif;
+  font-weight: lighter;
+}
+
 .wrapper {
   position: absolute;
   width: 90%;
@@ -39,6 +55,7 @@ body {
   outline: none;
   border-radius: 2em;
   cursor: pointer;
+  z-index: 1;
 }
 #letter-container {
   display: flex;
@@ -94,11 +111,31 @@ body {
 
 #result {
   color: black;
-  font-size: large;
+  font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .hide {
   display: none;
+}
+
+.fa-heart {
+  color: rgba(60, 0, 60, 0.8);
+
+  font-size: 25px;
+  position: absolute;
+  animation:  heartMove linear 1;
+  top: -10vh;
+  z-index: 0;
+}
+
+@keyframes heartMove {
+  0%{
+    transform: translateY(-10vh) ;
+  }
+  100%{
+    transform: translateY(110vh) ;
+  }
 }
