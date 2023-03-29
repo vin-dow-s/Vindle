@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
 
 * {
   padding: 0;
@@ -21,7 +21,7 @@ h1 {
   position: absolute;
   bottom: 0;
   width: 100%;
-  font-family: 'Luxurious Script', cursive;
+  font-family: 'Alex Brush', cursive;
   font-weight: lighter;
 }
 
