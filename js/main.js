@@ -22,7 +22,11 @@ const options = {
     unsupportive: "Megan's attitude",
     baguette: "A bag of uettes...",
     marvelous: "Qualifier for this game",
-    buzz: "Bee's sound"
+    buzz: "Bee's sound",
+    jan: "Who has never been up in a hot air balloon",
+    vindle: "This game's name :)",
+    monaco: "Cocktail; town in France",
+    walking: "Moonwalking but forward",
 }
 
 //Initial References
