@@ -91,6 +91,80 @@ const generateWord = () => {
     //Display each element as span
     userInpSection.innerHTML = displayItem;
     userInpSection.innerHTML += `<div id='chanceCount'>Chances Left: ${lossCount}</div>`;
+
+        //For creating letter buttons
+        for (let i = 65; i < 91; i++) {
+            let button = document.createElement("button");
+            button.classList.add("letters");
+
+            //Number to ASCII[A-Z]
+            button.innerText = String.fromCharCode(i);
+
+            //Character button onclick
+            button.addEventListener("click", () => {
+                message.innerText = `Correct Letter`;
+                message.style.color = "#008000";
+                let charArray = randomWord.toUpperCase().split("");
+                let inputSpace = document.getElementsByClassName("inputSpace");
+
+                //If array contains clicked value replace the matched Dash with Letter
+                if (charArray.includes(button.innerText)) {
+                    charArray.forEach((char, index) => {
+
+                        //If character in array is same as clicked button
+                        if (char === button.innerText) {
+                            button.classList.add("correct");
+
+                            //Replace dash with letter
+                            inputSpace[index].innerText = char;
+
+                            //increment counter
+                            winCount += 1;
+
+                            button.disabled = true;
+
+                            //If winCount equals word length
+                            if (winCount === charArray.length) {
+                                // Disable tous les boutons après la victoire
+                                let lettersButtons = document.querySelectorAll(".letters");
+                                lettersButtons.forEach((button) => {
+                                    button.disabled = true;
+                                });
+
+                                document.getElementById('chanceCount').style.display = 'none';
+                                const intervalId = setInterval(createHeart, 100);
+
+                                resultMessage.innerHTML = "<span id='__message'>You Won !!!!!</span>";
+                                restartBtn.style.display = 'block';
+
+                                setTimeout(() => {
+                                    clearInterval(intervalId);
+                                }, 3000);
+                            }
+                        }
+                    });
+                } else {
+                    //lose count
+                    button.classList.add("incorrect");
+                    lossCount -= 1;
+                    document.getElementById(
+                        "chanceCount"
+                    ).innerText = `Chances Left: ${lossCount}`;
+                    message.innerText = `Incorrect Letter`;
+                    message.style.color = "#ff0000";
+                    if (lossCount === 0) {
+                        word.innerHTML = `The word was: <span>${randomWord}</span>`;
+                        resultText.innerHTML = "Game Over...";
+                        blocker();
+                    }
+                }
+                //Disable clicked buttons
+                button.disabled = true;
+            });
+
+            //Append generated buttons to the letters container
+            letterContainer.appendChild(button);
+        }
 };
 
 //Initial Function
@@ -105,78 +179,13 @@ const init = () => {
     letterContainer.classList.add("hide");
     letterContainer.innerHTML = "";
     generateWord();
-
-    //For creating letter buttons
-    for (let i = 65; i < 91; i++) {
-        let button = document.createElement("button");
-        button.classList.add("letters");
-
-        //Number to ASCII[A-Z]
-        button.innerText = String.fromCharCode(i);
-
-        //Character button onclick
-        button.addEventListener("click", () => {
-            message.innerText = `Correct Letter`;
-            message.style.color = "#008000";
-            let charArray = randomWord.toUpperCase().split("");
-            let inputSpace = document.getElementsByClassName("inputSpace");
-
-            //If array contains clicked value replace the matched Dash with Letter
-            if (charArray.includes(button.innerText)) {
-                charArray.forEach((char, index) => {
-
-                    //If character in array is same as clicked button
-                    if (char === button.innerText) {
-                        button.classList.add("correct");
-
-                        //Replace dash with letter
-                        inputSpace[index].innerText = char;
-
-                        //increment counter
-                        winCount += 1;
-
-                        //If winCount equals word length
-                        if (winCount === charArray.length) {
-                            document.getElementById('chanceCount').style.display = 'none';
-                            const intervalId = setInterval(createHeart, 100);
-
-                            resultMessage.innerHTML = "<span id='__message'>You Won !!!!!</span>";
-                            restartBtn.style.display = 'block';
-
-                            setTimeout(() => {
-                                clearInterval(intervalId);
-                            }, 3000);
-                        }
-                    }
-                });
-            } else {
-                //lose count
-                button.classList.add("incorrect");
-                lossCount -= 1;
-                document.getElementById(
-                    "chanceCount"
-                ).innerText = `Chances Left: ${lossCount}`;
-                message.innerText = `Incorrect Letter`;
-                message.style.color = "#ff0000";
-                if (lossCount === 0) {
-                    word.innerHTML = `The word was: <span>${randomWord}</span>`;
-                    resultText.innerHTML = "Game Over...";
-                    blocker();
-                }
-            }
-            //Disable clicked buttons
-            button.disabled = true;
-        });
-
-        //Append generated buttons to the letters container
-        letterContainer.appendChild(button);
-        }
-    };
+}
 
 window.onload = () => {
     init();
 }
 
+//Purple hearts rain
 function createHeart() {
     const heart = document.createElement("div");
     heart.className = "fas fa-heart";
