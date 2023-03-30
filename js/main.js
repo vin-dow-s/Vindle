@@ -31,10 +31,12 @@ const options = {
 
 //Initial References
 const body = document.querySelector("body");
+const resultMessage = document.getElementById("result-message");
 const message = document.getElementById("message");
 const hintRef = document.querySelector(".hint-ref");
 const controls = document.querySelector(".controls-container");
 const startBtn = document.getElementById("start");
+const restartBtn = document.getElementById("restartBtn");
 const letterContainer = document.getElementById("letter-container");
 const userInpSection = document.getElementById("user-input-section");
 const resultText = document.getElementById("result");
@@ -44,8 +46,6 @@ let randomWord = "",
     randomHint = "";
 let winCount = 0,
     lossCount = 0;
-
-let intervals = [];
 
 //Generate random value
 const generateRandomValue = (array) => Math.floor(Math.random() * array.length);
@@ -59,8 +59,16 @@ const blocker = () => {
 //Start game
 startBtn.addEventListener('click', () => {
     controls.classList.add("hide");
+    resultMessage.innerHTML = '';
+    restartBtn.style.display = 'none';
     init();
 });
+
+restartBtn.addEventListener('click', () => {
+    resultMessage.innerHTML = '';
+    restartBtn.style.display = 'none';
+    init();
+})
 
 //Stop Game
 const stopGame = () => {
@@ -129,17 +137,15 @@ const init = () => {
 
                         //If winCount equals word length
                         if (winCount === charArray.length) {
+                            document.getElementById('chanceCount').style.display = 'none';
                             const intervalId = setInterval(createHeart, 100);
 
-                            resultText.innerHTML = "You Won !!!!!";
-                            startBtn.innerText = "Restart";
+                            resultMessage.innerHTML = "<span id='__message'>You Won !!!!!</span>";
+                            restartBtn.style.display = 'block';
 
                             setTimeout(() => {
                                 clearInterval(intervalId);
                             }, 3000);
-
-                            //block all buttons
-                            blocker();
                         }
                     }
                 });

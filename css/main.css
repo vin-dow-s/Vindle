@@ -25,6 +25,21 @@ h1 {
   font-weight: lighter;
 }
 
+#result-message {
+  display: flex;
+  justify-content: center;
+}
+
+#__message {
+  position: absolute;
+  top: 0;
+  padding: 1em;
+  margin-top: 1em;
+  font-size: x-large;
+  font-weight: bold;
+  text-transform: uppercase
+}
+
 .wrapper {
   position: absolute;
   width: 90%;
@@ -59,6 +74,27 @@ h1 {
   cursor: pointer;
   z-index: 1;
 }
+
+#restart {
+  display: flex;
+  justify-content: center;
+  margin-top: -1em;
+  margin-bottom: 1em;
+}
+
+#restartBtn {
+  display: none;
+  font-size: 1em;
+  padding: 1em 2em;
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 2em;
+  cursor: pointer;
+  z-index: 1;
+}
+
 #letter-container {
   display: flex;
   flex-wrap: wrap;
