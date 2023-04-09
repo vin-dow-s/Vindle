@@ -74,26 +74,6 @@ h1 {
   z-index: 1;
 }
 
-#restart {
-  display: flex;
-  justify-content: center;
-  margin-top: -1em;
-  margin-bottom: 1em;
-}
-
-#restartBtn {
-  display: none;
-  font-size: 1em;
-  padding: 1em 2em;
-  background-color: black;
-  color: white;
-  border: none;
-  outline: none;
-  border-radius: 2em;
-  cursor: pointer;
-  z-index: 1;
-}
-
 #letter-container {
   display: flex;
   flex-wrap: wrap;
@@ -159,6 +139,7 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-top: 40vh;
+  text-align: center;
   font-size: x-large;
 }
 
@@ -185,13 +166,9 @@ h1 {
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 350px){
   .wrapper {
     top: 80%;
     padding: 5em 1em;
-  }
-
-  #restartBtn {
-    margin-top: 1em;
   }
 }

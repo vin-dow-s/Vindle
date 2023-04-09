@@ -9,13 +9,12 @@ const message = document.getElementById("message");
 const hintRef = document.querySelector(".hint-ref");
 const controls = document.querySelector(".controls-container");
 const startBtn = document.getElementById("start");
-const restartBtn = document.getElementById("restartBtn");
 const letterContainer = document.getElementById("letter-container");
 const userInpSection = document.getElementById("user-input-section");
 const resultText = document.getElementById("result");
 const word = document.getElementById("word");
 const words = Object.keys(options);
-let randomWord = "",
+let wordToGuess = "",
     randomHint = "";
 let winCount = 0,
     lossCount = 0;
@@ -24,7 +23,9 @@ const storageKey = "lastPlayedDate";
 const today = new Date().toISOString().slice(0, 10);
 
 //Generate random value
+/*
 const generateRandomValue = (array) => Math.floor(Math.random() * array.length);
+ */
 
 //Block all the buttons
 const blocker = () => {
@@ -36,15 +37,8 @@ const blocker = () => {
 startBtn.addEventListener('click', () => {
     controls.classList.add("hide");
     resultMessage.innerHTML = '';
-    restartBtn.style.display = 'none';
     init();
 });
-
-restartBtn.addEventListener('click', () => {
-    resultMessage.innerHTML = '';
-    restartBtn.style.display = 'none';
-    init();
-})
 
 //Stop Game
 const stopGame = () => {
@@ -55,12 +49,12 @@ const stopGame = () => {
 const generateWord = () => {
     letterContainer.classList.remove("hide");
     userInpSection.innerText = "";
-    randomWord = words[0];
-    randomHint = options[randomWord].replaceAll("_", " ");
+    wordToGuess = words[0];
+    randomHint = options[wordToGuess].replaceAll("_", " ");
     hintRef.innerHTML = `<div id="wordHint">
             <span>Hint: </span>${randomHint}</div>`;
     let displayItem = "";
-    randomWord.split("").forEach((value) => {
+    wordToGuess.split("").forEach((value) => {
         if (value === "_") {
             displayItem += '<span class="inputSpace">&nbsp;</span>';
         } else {
@@ -84,7 +78,7 @@ const generateWord = () => {
             button.addEventListener("click", () => {
                 message.innerText = `Correct Letter`;
                 message.style.color = "#008000";
-                let charArray = randomWord.toUpperCase().split("");
+                let charArray = wordToGuess.toUpperCase().split("");
                 let inputSpace = document.getElementsByClassName("inputSpace");
 
                 //If array contains clicked value replace the matched Dash with Letter
@@ -111,11 +105,9 @@ const generateWord = () => {
                                     button.disabled = true;
                                 });
 
-                                document.getElementById('chanceCount').style.display = 'none';
                                 const intervalId = setInterval(createHeart, 100);
 
                                 resultMessage.innerHTML = "<span id='__message'>You Won !!!!!</span>";
-                                restartBtn.style.display = 'block';
 
                                 setTimeout(() => {
                                     clearInterval(intervalId);
@@ -133,7 +125,7 @@ const generateWord = () => {
                     message.innerText = `Incorrect Letter`;
                     message.style.color = "#ff0000";
                     if (lossCount === 0) {
-                        word.innerHTML = `The answer was: <span>${randomWord.replace(/_/g, ' ')}</span>`;
+                        word.innerHTML = `The answer was: <span>${wordToGuess.replace(/_/g, ' ')}</span>`;
                         resultText.innerHTML = "Game Over...";
                         blocker();
                     }
@@ -151,7 +143,7 @@ const generateWord = () => {
 const init = () => {
     winCount = 0;
     lossCount = 5;
-    randomWord = "";
+    wordToGuess = "";
     word.innerText = "";
     randomHint = "";
     message.innerText = "";
