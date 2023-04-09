@@ -154,6 +154,14 @@ h1 {
   z-index: 1;
 }
 
+.alreadyPlayed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40vh;
+  font-size: x-large;
+}
+
 .hide {
   display: none;
 }
@@ -174,5 +182,16 @@ h1 {
   }
   100%{
     transform: translateY(110vh) ;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .wrapper {
+    top: 80%;
+    padding: 5em 1em;
+  }
+
+  #restartBtn {
+    margin-top: 1em;
   }
 }

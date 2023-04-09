@@ -1,32 +1,5 @@
 const options = {
-    aroma: "Pleasing smell",
-    pepper: "Salt's partner",
-    halt: "Put a stop to",
-    jump: "Rise suddenly",
-    shuffle: "Mix cards up",
-    combine: "Add; Mix",
-    chaos: "Total disorder",
-    labyrinth: "Maze",
-    disturb: "Interrupt; upset ",
-    shift: "Move; Period of word",
-    machine: "Device or appliance",
-    sushi: "Salmon over rice",
-    champagne: "Snazzy sparkling drink",
-    camembert: "Circular cheese",
-    sheep: "Fluffy animal",
-    eclipse: "Stars hiding each other",
-    grenade: "Throwable explosive device",
-    jackpot: "Big win",
-    opera: "Ballet; cake",
-    chicken: "Feathers with feet",
-    unsupportive: "Megan's attitude",
-    baguette: "A bag of uettes...",
-    marvelous: "Qualifier for this game",
-    buzz: "Bee's sound",
-    jan: "Who has never been up in a hot air balloon",
-    vindle: "This game's name :)",
-    monaco: "Cocktail; town in France",
-    walking: "Moonwalking but forward",
+    coin_coin: "Duck sound in French"
 }
 
 //Initial References
@@ -46,6 +19,9 @@ let randomWord = "",
     randomHint = "";
 let winCount = 0,
     lossCount = 0;
+
+const storageKey = "lastPlayedDate";
+const today = new Date().toISOString().slice(0, 10);
 
 //Generate random value
 const generateRandomValue = (array) => Math.floor(Math.random() * array.length);
@@ -79,13 +55,17 @@ const stopGame = () => {
 const generateWord = () => {
     letterContainer.classList.remove("hide");
     userInpSection.innerText = "";
-    randomWord = words[generateRandomValue(words)];
-    randomHint = options[randomWord];
+    randomWord = words[0];
+    randomHint = options[randomWord].replaceAll("_", " ");
     hintRef.innerHTML = `<div id="wordHint">
             <span>Hint: </span>${randomHint}</div>`;
     let displayItem = "";
     randomWord.split("").forEach((value) => {
-        displayItem += '<span class="inputSpace">_ </span>';
+        if (value === "_") {
+            displayItem += '<span class="inputSpace">&nbsp;</span>';
+        } else {
+            displayItem += '<span class="inputSpace">_ </span>';
+        }
     });
 
     //Display each element as span
@@ -124,7 +104,7 @@ const generateWord = () => {
                             button.disabled = true;
 
                             //If winCount equals word length
-                            if (winCount === charArray.length) {
+                            if (winCount === charArray.filter(c => c !== "_").length) {
                                 // Disable tous les boutons après la victoire
                                 let lettersButtons = document.querySelectorAll(".letters");
                                 lettersButtons.forEach((button) => {
@@ -153,7 +133,7 @@ const generateWord = () => {
                     message.innerText = `Incorrect Letter`;
                     message.style.color = "#ff0000";
                     if (lossCount === 0) {
-                        word.innerHTML = `The word was: <span>${randomWord}</span>`;
+                        word.innerHTML = `The answer was: <span>${randomWord.replace(/_/g, ' ')}</span>`;
                         resultText.innerHTML = "Game Over...";
                         blocker();
                     }
@@ -182,7 +162,17 @@ const init = () => {
 }
 
 window.onload = () => {
-    init();
+    const lastPlayed = localStorage.getItem(storageKey);/*
+    if (lastPlayed !== null && lastPlayed === today) {
+        body.innerHTML =
+            `<div class="alreadyPlayed">
+                <span>You have already played today...</span>
+            </div>
+            `;
+        startBtn.style.display = 'none';
+    } else {
+        localStorage.setItem(storageKey, today);*/
+        init();
 }
 
 //Purple hearts rain
