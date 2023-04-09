@@ -162,7 +162,7 @@ const init = () => {
 }
 
 window.onload = () => {
-    const lastPlayed = localStorage.getItem(storageKey);/*
+    const lastPlayed = localStorage.getItem(storageKey);
     if (lastPlayed !== null && lastPlayed === today) {
         body.innerHTML =
             `<div class="alreadyPlayed">
@@ -171,8 +171,9 @@ window.onload = () => {
             `;
         startBtn.style.display = 'none';
     } else {
-        localStorage.setItem(storageKey, today);*/
+        localStorage.setItem(storageKey, today);
         init();
+    }
 }
 
 //Purple hearts rain
