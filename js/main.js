@@ -132,6 +132,7 @@ const generateWord = () => {
                     if (lossCount === 0) {
                         word.innerHTML = `The answer was: <span>${wordToGuess.replace(/_/g, ' ')}</span>`;
                         resultText.innerHTML = "Game Over...";
+                        startBtn.style.display = 'none';
                         blocker();
                     }
                 }
