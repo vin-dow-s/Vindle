@@ -111,6 +111,7 @@ const generateWord = () => {
                                 const intervalId = setInterval(createHeart, 100);
 
                                 resultMessage.innerHTML = "<span id='__message'>You Won !!!!!</span>";
+                                localStorage.setItem(storageKey, today);
                                 localStorage.setItem('lossCountStorage', lossCount);
                                 localStorage.setItem("won", true.toString());
 
@@ -130,6 +131,7 @@ const generateWord = () => {
                     message.innerText = `Incorrect Letter`;
                     message.style.color = "#ff0000";
                     if (lossCount === 0) {
+                        localStorage.setItem(storageKey, today);
                         word.innerHTML = `The answer was: <span>${wordToGuess.replace(/_/g, ' ')}</span>`;
                         resultText.innerHTML = "Game Over...";
                         startBtn.style.display = 'none';
@@ -162,7 +164,6 @@ const init = () => {
 window.onload = () => {
     const lastPlayed = localStorage.getItem(storageKey);
     if (lastPlayed !== null && lastPlayed === today) {
-
         if (localStorage.getItem('won')) {
             body.innerHTML =
             `<div class="alreadyPlayed">
@@ -184,7 +185,6 @@ window.onload = () => {
         }
         startBtn.style.display = 'none';
     } else {
-        localStorage.setItem(storageKey, today);
         init();
     }
 }
