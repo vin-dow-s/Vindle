@@ -1,5 +1,12 @@
 const options = {
-    coin_coin: "Duck sound in French"
+    coin_coin: "Duck sound in French",
+    cherish: "To hold dear; to treat with affection",
+    bamboozle: "To trick or confuse someone",
+    flibbertigibbet: "Flighty person; overly talkative",
+    long_john_silver: "Pirate's name in Stevenson's Treasure Island",
+    hocus_pocus: "Magical trickery; deception action or talk",
+    basil: "Main ingredient in a pesto",
+    shenanigans: "Secret or dishonest activities/behaviour",
 }
 
 //Initial References
@@ -24,6 +31,10 @@ let won = false;
 
 const storageKey = "lastPlayedDate";
 const today = new Date().toISOString().slice(0, 10);
+const todayDate = new Date(new Date().toISOString().slice(0, 10));
+const dayOfYear = Math.floor((todayDate - new Date(todayDate.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+const wordIndex = dayOfYear % words.length;
+const lastPlayedDate = localStorage.getItem('lastPlayedDate');
 
 //Generate random value
 /*
@@ -52,7 +63,7 @@ const stopGame = () => {
 const generateWord = () => {
     letterContainer.classList.remove("hide");
     userInpSection.innerText = "";
-    wordToGuess = words[0];
+    wordToGuess = words[wordIndex];
     randomHint = options[wordToGuess].replaceAll("_", " ");
     hintRef.innerHTML = `<div id="wordHint">
             <span>Hint: </span>${randomHint}</div>`;
@@ -131,6 +142,8 @@ const generateWord = () => {
                     message.innerText = `Incorrect Letter`;
                     message.style.color = "#ff0000";
                     if (lossCount === 0) {
+                        localStorage.setItem("won", false.toString());
+                        localStorage.setItem('lossCountStorage', lossCount);
                         localStorage.setItem(storageKey, today);
                         word.innerHTML = `The answer was: <span>${wordToGuess.replace(/_/g, ' ')}</span>`;
                         resultText.innerHTML = "Game Over...";
@@ -164,7 +177,7 @@ const init = () => {
 window.onload = () => {
     const lastPlayed = localStorage.getItem(storageKey);
     if (lastPlayed !== null && lastPlayed === today) {
-        if (localStorage.getItem('won')) {
+        if (localStorage.getItem('won') === 'true') {
             body.innerHTML =
             `<div class="alreadyPlayed">
                 <span>You have already played today...</span>
