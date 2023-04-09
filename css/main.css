@@ -143,6 +143,11 @@ h1 {
   font-size: x-large;
 }
 
+.lossCount {
+  margin-top: 1em;
+  font-size: large;
+}
+
 .hide {
   display: none;
 }

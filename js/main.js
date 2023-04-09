@@ -19,6 +19,9 @@ let wordToGuess = "",
 let winCount = 0,
     lossCount = 0;
 
+let lossCountStorage = lossCount;
+let won = false;
+
 const storageKey = "lastPlayedDate";
 const today = new Date().toISOString().slice(0, 10);
 
@@ -108,6 +111,8 @@ const generateWord = () => {
                                 const intervalId = setInterval(createHeart, 100);
 
                                 resultMessage.innerHTML = "<span id='__message'>You Won !!!!!</span>";
+                                localStorage.setItem('lossCountStorage', lossCount);
+                                localStorage.setItem("won", true.toString());
 
                                 setTimeout(() => {
                                     clearInterval(intervalId);
@@ -156,11 +161,26 @@ const init = () => {
 window.onload = () => {
     const lastPlayed = localStorage.getItem(storageKey);
     if (lastPlayed !== null && lastPlayed === today) {
-        body.innerHTML =
+
+        if (localStorage.getItem('won')) {
+            body.innerHTML =
             `<div class="alreadyPlayed">
                 <span>You have already played today...</span>
             </div>
+            <div class="alreadyPlayed lossCount">
+                <span>You <strong>won</strong>, with <strong>${localStorage.getItem('lossCountStorage')} chances remaining</strong></span>
+            </div>
             `;
+        } else {
+            body.innerHTML =
+            `<div class="alreadyPlayed">
+                <span>You have already played today...</span>
+            </div>
+            <div class="alreadyPlayed lossCount">
+                <span>You did not find the word :(</span>
+            </div>
+            `;
+        }
         startBtn.style.display = 'none';
     } else {
         localStorage.setItem(storageKey, today);
