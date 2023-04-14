@@ -39,10 +39,9 @@ let lossCountStorage = lossCount;
 let won = false;
 
 const storageKey = "lastPlayedDate";
-const today = new Date().toISOString().slice(0, 10);
-const todayDate = new Date(new Date().toISOString().slice(0, 10));
-const dayOfYear = Math.floor((todayDate - new Date(todayDate.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
-const wordIndex = dayOfYear % words.length;
+let today = new Date().toISOString().slice(0, 10);
+let wordIndex = 0;
+let wordCounter = 0;
 const lastPlayedDate = localStorage.getItem('lastPlayedDate');
 
 //Generate random value
@@ -70,9 +69,17 @@ const stopGame = () => {
 
 //Generate Word Function
 const generateWord = () => {
+    const currentDate = new Date().toISOString().slice(0, 10);
+
+    if (currentDate !== today) {
+        today = currentDate;
+        wordCounter++;
+        wordIndex = wordCounter % words.length;
+    }
+
     letterContainer.classList.remove("hide");
     userInpSection.innerText = "";
-    wordToGuess = words[0];
+    wordToGuess = words[wordIndex];
     randomHint = options[wordToGuess].replaceAll("_", " ");
     hintRef.innerHTML = `<div id="wordHint">
             <span>Hint: </span>${randomHint}</div>`;
