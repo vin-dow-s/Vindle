@@ -1,4 +1,12 @@
 const options = {
+    coin_coin: "Duck sound in French",
+    cherish: "To hold dear; to treat with affection",
+    bamboozle: "To trick or confuse someone",
+    flibbertigibbet: "Flighty person; overly talkative",
+    long_john_silver: "Pirate's name in Stevenson's Treasure Island",
+    hocus_pocus: "Magical trickery; deception action or talk",
+    basil: "Main ingredient in a pesto",
+    shenanigans: "Secret or dishonest activities/behaviour",
     umami: "Savory taste, 5th of the basic tastes alongside sweet, sour, salty, and bitter",
     zeitgeist: "The spirit or defining mood of a particular period of history",
     hat_trick: "Scoring three goals in a single game (football, hockey...)",
@@ -39,9 +47,10 @@ let lossCountStorage = lossCount;
 let won = false;
 
 const storageKey = "lastPlayedDate";
-let today = new Date().toISOString().slice(0, 10);
-let wordIndex = 0;
-let wordCounter = 0;
+const today = new Date().toISOString().slice(0, 10);
+const todayDate = new Date(today);
+const dayOfMonth = todayDate.getDate();
+const wordIndex = dayOfMonth - 7;
 const lastPlayedDate = localStorage.getItem('lastPlayedDate');
 
 //Generate random value
@@ -69,14 +78,8 @@ const stopGame = () => {
 
 //Generate Word Function
 const generateWord = () => {
-    const currentDate = new Date().toISOString().slice(0, 10);
-
-    if (currentDate !== today) {
-        today = currentDate;
-        wordCounter++;
-        wordIndex = wordCounter % words.length;
-    }
-
+    console.log(dayOfMonth);
+    console.log(wordIndex);
     letterContainer.classList.remove("hide");
     userInpSection.innerText = "";
     wordToGuess = words[wordIndex];
