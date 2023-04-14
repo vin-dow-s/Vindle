@@ -1,12 +1,4 @@
 const options = {
-    coin_coin: "Duck sound in French",
-    cherish: "To hold dear; to treat with affection",
-    bamboozle: "To trick or confuse someone",
-    flibbertigibbet: "Flighty person; overly talkative",
-    long_john_silver: "Pirate's name in Stevenson's Treasure Island",
-    hocus_pocus: "Magical trickery; deception action or talk",
-    basil: "Main ingredient in a pesto",
-    shenanigans: "Secret or dishonest activities/behaviour",
     umami: "Savory taste, 5th of the basic tastes alongside sweet, sour, salty, and bitter",
     zeitgeist: "The spirit or defining mood of a particular period of history",
     hat_trick: "Scoring three goals in a single game (football, hockey...)",
@@ -80,7 +72,7 @@ const stopGame = () => {
 const generateWord = () => {
     letterContainer.classList.remove("hide");
     userInpSection.innerText = "";
-    wordToGuess = words[wordIndex];
+    wordToGuess = words[0];
     randomHint = options[wordToGuess].replaceAll("_", " ");
     hintRef.innerHTML = `<div id="wordHint">
             <span>Hint: </span>${randomHint}</div>`;
