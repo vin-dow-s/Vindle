@@ -1,12 +1,22 @@
 const options = {
-    coin_coin: "Duck sound in French",
-    cherish: "To hold dear; to treat with affection",
-    bamboozle: "To trick or confuse someone",
-    flibbertigibbet: "Flighty person; overly talkative",
-    long_john_silver: "Pirate's name in Stevenson's Treasure Island",
-    hocus_pocus: "Magical trickery; deception action or talk",
-    basil: "Main ingredient in a pesto",
+    umami: "Savory taste, 5th of the basic tastes alongside sweet, sour, salty, and bitter",
+    zeitgeist: "The spirit or defining mood of a particular period of history",
+    hat_trick: "Scoring three goals in a single game (football, hockey...)",
+    repertoire: "Collection of songs an artist knows/can perform",
     shenanigans: "Secret or dishonest activities/behaviour",
+    eccentric: "Unconventional; peculiar in behavior or appearance",
+    serendipity: "Finding something good by chance",
+    conundrum: "A confusing and difficult problem or question",
+    ephemeral: "Lasting for a very short time",
+    enigma: "A mysterious or puzzling person or situation",
+    mellifluous: "Smooth and sweet-sounding; pleasant to hear",
+    quixotic: "Exceedingly idealistic; unrealistic and impractical",
+    ubiquitous: "Seemingly everywhere at once",
+    plethora: "A large or excessive amount of something",
+    perspicacious: "Having a keen understanding; mentally sharp",
+    paragon: "A model of excellence or perfection",
+    euphoria: "A feeling of intense happiness or excitement",
+    onomatopoeia: "A word that imitates the sound it represents"
 }
 
 //Initial References
