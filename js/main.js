@@ -63,7 +63,7 @@ const stopGame = () => {
 const generateWord = () => {
     letterContainer.classList.remove("hide");
     userInpSection.innerText = "";
-    wordToGuess = words[wordIndex - 2];
+    wordToGuess = words[wordIndex];
     randomHint = options[wordToGuess].replaceAll("_", " ");
     hintRef.innerHTML = `<div id="wordHint">
             <span>Hint: </span>${randomHint}</div>`;
