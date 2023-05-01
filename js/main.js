@@ -23,7 +23,23 @@ const options = {
     perspicacious: "Having a keen understanding; mentally sharp",
     paragon: "A model of excellence or perfection",
     euphoria: "A feeling of intense happiness or excitement",
-    onomatopoeia: "A word that imitates the sound it represents"
+    onomatopoeia: "A word that imitates the sound it represents",
+    frenetic : "Fast and energetic in a wild and uncontrolled way",
+    sydney: "Where did the 2000 Summer Olympics take place?",
+    cathartic : "Providing psychological relief through the open expression of strong emotions",
+    the_kingsmen: "Which band covered 'Louie Louie' in 1963, making it become a rock standard",
+    supercilious : "Behaving or looking as though one thinks one is superior to others",
+    iago: "What is the parrot called in Aladdin?",
+    ineffable : "Too great or extreme to be expressed or described in words",
+    soba: "Type of Japanese noodles made from buckwheat flour",
+    vicissitude : "A change of circumstances or fortune, typically one that is unwelcome or unpleasant",
+    travis: "De Niro's first name in Taxi Driver",
+    recalcitrant : "Having an obstinately uncooperative attitude toward authority or discipline",
+    magna_carta: "Document that limited the powers of the English monarchy (in 1215)",
+    lugubrious : "Looking or sounding sad and dismal",
+    prosaic : "Having the style or diction of prose; lacking poetic beauty",
+    perfidious : "Deceitful and untrustworthy",
+    feudalism: "Political system in which nobles held power and land in medieval Europe"
 }
 
 //Initial References
