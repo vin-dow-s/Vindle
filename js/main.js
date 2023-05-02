@@ -66,7 +66,7 @@ const storageKey = "lastPlayedDate";
 const today = new Date().toISOString().slice(0, 10);
 const todayDate = new Date(today);
 const dayOfMonth = todayDate.getDate();
-const wordIndex = dayOfMonth - 7;
+const wordIndex = dayOfMonth;
 const lastPlayedDate = localStorage.getItem('lastPlayedDate');
 
 //Generate random value
