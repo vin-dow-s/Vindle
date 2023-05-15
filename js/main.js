@@ -14,7 +14,20 @@ const options = {
     lugubrious : "Looking or sounding sad and dismal",
     prosaic : "Having the style or diction of prose; lacking poetic beauty",
     perfidious : "Deceitful and untrustworthy",
-    feudalism: "Political system in which nobles held power and land in medieval Europe"
+    feudalism: "Political system in which nobles held power and land in medieval Europe",
+    sonorous: "Having a deep, rich, and full sound, like a resonant voice",
+    bucolic: "Relating to the pleasant aspects of the countryside and rural life",
+    melancholy: "A feeling of pensive sadness, typically with no obvious cause",
+    saffron: "An orange-yellow spice derived from a flower, commonly used in cooking",
+    renaissance: "A period of renewed interest and growth in art, literature, and learning in Europe",
+    cajun: "Relating to the French-speaking Acadian people of Louisiana",
+    sitar: "A stringed instrument of India, with a long neck and a varying number of strings",
+    suffrage: "The right to vote in political elections",
+    ceviche: "A dish of raw fish or seafood marinated in citrus juice, often served as an appetiser",
+    enlightenment: "A philosophical movement emphasising reason, knowledge, and individualism",
+    cartography: "The practice of making maps or charts",
+    staccato: "In music, with each note sharply separated or detached from the others",
+    suffragette: "A woman who campaigned for the right to vote, particularly in the early 20th century"
 }
 
 //Initial References
