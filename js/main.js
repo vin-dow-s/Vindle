@@ -1,33 +1,17 @@
 const options = {
-    frenetic : "Fast and energetic in a wild and uncontrolled way",
-    sydney: "Where did the 2000 Summer Olympics take place?",
-    cathartic : "Providing psychological relief through the open expression of strong emotions",
-    the_kingsmen: "Which band covered 'Louie Louie' in 1963, making it become a rock standard",
-    supercilious : "Behaving or looking as though one thinks one is superior to others",
-    iago: "What is the parrot called in Aladdin?",
-    ineffable : "Too great or extreme to be expressed or described in words",
-    soba: "Type of Japanese noodles made from buckwheat flour",
-    vicissitude : "A change of circumstances or fortune, typically one that is unwelcome or unpleasant",
-    travis: "De Niro's first name in Taxi Driver",
-    recalcitrant : "Having an obstinately uncooperative attitude toward authority or discipline",
-    magna_carta: "Document that limited the powers of the English monarchy (in 1215)",
-    lugubrious : "Looking or sounding sad and dismal",
-    prosaic : "Having the style or diction of prose; lacking poetic beauty",
-    perfidious : "Deceitful and untrustworthy",
-    feudalism: "Political system in which nobles held power and land in medieval Europe",
-    sonorous: "Having a deep, rich, and full sound, like a resonant voice",
-    bucolic: "Relating to the pleasant aspects of the countryside and rural life",
-    melancholy: "A feeling of pensive sadness, typically with no obvious cause",
-    saffron: "An orange-yellow spice derived from a flower, commonly used in cooking",
-    renaissance: "A period of renewed interest and growth in art, literature, and learning in Europe",
-    cajun: "Relating to the French-speaking Acadian people of Louisiana",
-    sitar: "A stringed instrument of India, with a long neck and a varying number of strings",
-    suffrage: "The right to vote in political elections",
-    ceviche: "A dish of raw fish or seafood marinated in citrus juice, often served as an appetiser",
-    enlightenment: "A philosophical movement emphasising reason, knowledge, and individualism",
-    cartography: "The practice of making maps or charts",
-    staccato: "In music, with each note sharply separated or detached from the others",
-    suffragette: "A woman who campaigned for the right to vote, particularly in the early 20th century"
+    codex: "An ancient manuscript book, especially one written in the Middle Ages",
+    serendipity: "The occurrence of events by chance in a happy or beneficial way",
+    palatial: "Resembling or suitable for a palace; grand and luxurious",
+    pastiche: "An artistic work that imitates the style of another work or period",
+    inexorable: "Impossible to stop or prevent; relentless",
+    malaise: "A general feeling of discomfort, illness, or unease",
+    resilience: "The capacity to recover quickly from difficulties; toughness",
+    panacea: "A solution or remedy for all difficulties or diseases; a cure-all",
+    calligraphy: "The art of producing decorative handwriting or lettering with a pen or brush",
+    epitome: "A person or thing that is a perfect example of a particular quality or type",
+    ethereal: "Extremely delicate, light, or airy; heavenly or spiritual",
+    diaspora: "The dispersion of a group of people from their original homeland",
+    soliloquy: "An act of speaking one's thoughts aloud when alone or regardless of hearers, especially by a character in a play"
 }
 
 //Initial References
@@ -54,7 +38,7 @@ const storageKey = "lastPlayedDate";
 const today = new Date().toISOString().slice(0, 10);
 const todayDate = new Date(today);
 const dayOfMonth = todayDate.getDate();
-const wordIndex = dayOfMonth - 1;
+const wordIndex = dayOfMonth - 30;
 const lastPlayedDate = localStorage.getItem('lastPlayedDate');
 
 //Generate random value
