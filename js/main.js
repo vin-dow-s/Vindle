@@ -11,7 +11,24 @@ const options = {
     epitome: "A person or thing that is a perfect example of a particular quality or type",
     ethereal: "Extremely delicate, light, or airy; heavenly or spiritual",
     diaspora: "The dispersion of a group of people from their original homeland",
-    soliloquy: "An act of speaking one's thoughts aloud when alone or regardless of hearers, especially by a character in a play"
+    soliloquy: "An act of speaking one's thoughts aloud when alone or regardless of hearers, especially by a character in a play",
+    michelangelo: "Who painted the Sistine CHapel?",
+    ampere: "Unit of electric current",
+    josephine_baker: "French-American woman artist (singer, dancer, Resistance fighter...) who brought Charleston dance to France",
+    vivaldi: "Who composed the classical music piece 'The Four Seasons'?",
+    neptune: "Roman equivalent of the Greek god Poseidon",
+    skin: "Largest organ in the human body",
+    venezuela: "In which country is the highest waterfall in the world located? (Angel Falls)",
+    edvard_munch: "Who painted 'The Scream'?",
+    felis_catus: "Scientific name for the domestic cat",
+    marie_antoinette: "Queen of France during the French Revolution :)",
+    kyoto_protocol: "International agreement aimed at combating climate change",
+    fibonacci: "Name of the sequence of numbers in which each number is the sum of the two preceding ones",
+    surrealism: "Artistic and literary movement that sought to explore the realm of the unconscious mind",
+    trafalgar: "Which famous English public square is named after a naval battle between British and French fleets?",
+    leo_tolstoy: "Which Russian author wrote the novel 'War and Peace'?",
+    au: "Chemical symbol for Gold",
+    ivory_coast: "Which country is the largest producer of cocoa in the world?"
 }
 
 //Initial References
