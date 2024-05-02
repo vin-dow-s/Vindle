@@ -36,6 +36,7 @@ const options = {
 const body = document.querySelector("body");
 const resultMessage = document.getElementById("result-message");
 const message = document.getElementById("message");
+const answerLength = document.getElementById("answer-length");
 const hintRef = document.querySelector(".hint-ref");
 const controls = document.querySelector(".controls-container");
 const startBtn = document.getElementById("start");
@@ -84,8 +85,6 @@ const stopGame = () => {
 
 //Generate Word Function
 const generateWord = () => {
-    console.log(dayOfMonth);
-    console.log(wordIndex);
     letterContainer.classList.remove("hide");
     userInpSection.innerText = "";
     wordToGuess = words[wordIndex];
@@ -99,7 +98,9 @@ const generateWord = () => {
         } else {
             displayItem += '<span class="inputSpace">_ </span>';
         }
-    });
+    })
+
+    answerLength.innerHTML = `<span style="color:grey; font-size:small;"}>${wordToGuess.length} letters</span>`;
 
     //Display each element as span
     userInpSection.innerHTML = displayItem;
