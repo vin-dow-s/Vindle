@@ -261,9 +261,15 @@ window.onload = () => {
 
 //Purple hearts rain
 function createHeart() {
-    const heart = document.createElement("div")
-    heart.className = "fa-solid fa-heart"
+    const heart = document.createElement("img")
+    heart.src = "img/heart.png"
+    heart.className = "heart"
     heart.style.left = Math.random() * 100 + "vw"
     heart.style.animationDuration = Math.random() * 3 + 2 + "s"
-    body.appendChild(heart)
+
+    document.body.appendChild(heart)
+
+    setTimeout(() => {
+        heart.remove()
+    }, parseFloat(heart.style.animationDuration) * 1000)
 }
