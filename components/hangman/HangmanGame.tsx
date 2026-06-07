@@ -235,6 +235,20 @@ export function HangmanGame({
       })
     : 0;
 
+  // Keep a single word on ONE line: shrink the slots for longer words on
+  // mobile, restored to full size from the sm breakpoint up (desktop has room).
+  const letterCount = entry.word
+    .split("")
+    .filter((c) => normalizeWord(c).length > 0).length;
+  const blankSize =
+    letterCount <= 7
+      ? "h-10 w-7 text-2xl"
+      : letterCount <= 9
+        ? "h-9 w-6 text-xl"
+        : letterCount <= 11
+          ? "h-8 w-5 text-lg"
+          : "h-8 w-4 text-base";
+
   return (
     <main className="mx-auto flex w-full max-w-xl flex-1 flex-col px-5 py-6">
       <Link
@@ -276,7 +290,7 @@ export function HangmanGame({
         </div>
 
         {/* Word blanks */}
-        <div className="mt-8 flex flex-wrap items-end justify-center gap-x-2.5 gap-y-3">
+        <div className="mt-8 flex flex-nowrap items-end justify-center gap-x-1 sm:gap-x-2.5">
           {entry.word.split("").map((char, i) => {
             const sep = normalizeWord(char).length === 0;
             if (sep) return <span key={i} className="w-3" />;
@@ -286,7 +300,7 @@ export function HangmanGame({
             return (
               <span
                 key={`${i}-${revealed}`}
-                className={`flex h-10 w-7 items-end justify-center border-b-2 pb-1 text-2xl font-bold uppercase ${
+                className={`flex ${blankSize} shrink-0 items-end justify-center border-b-2 pb-1 font-bold uppercase sm:h-10 sm:w-7 sm:text-2xl ${
                   revealed ? "animate-pop" : ""
                 } ${missed ? "border-danger text-danger" : "border-edge text-ink"}`}
               >
