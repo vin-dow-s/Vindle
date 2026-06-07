@@ -16,10 +16,14 @@ const alexBrush = Alex_Brush({
 });
 
 export const metadata: Metadata = {
-  title: "Vindle — le jeu de mots quotidien",
+  title: "Vindle — the daily word game",
   description:
-    "Vindle : devine le mot du jour. Plusieurs modes, bilingue FR/EN, classement entre joueurs.",
-  icons: { icon: "/heart.png" },
+    "Vindle: guess the daily word. Word-of-the-day with a clue or classic Wordle, bilingual EN/FR, and a friendly leaderboard.",
+  icons: {
+    icon: "/heart.png",
+    shortcut: "/heart.png",
+    apple: "/heart.png",
+  },
 };
 
 export default function RootLayout({

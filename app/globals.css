@@ -69,6 +69,10 @@ body {
   color: var(--ink);
 }
 
+button:not(:disabled) {
+  cursor: pointer;
+}
+
 /* Cursive "Vindle" wordmark */
 .font-title {
   font-family: var(--font-alex-brush), cursive;

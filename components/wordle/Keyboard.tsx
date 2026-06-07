@@ -40,8 +40,8 @@ export function Keyboard({
                 tabIndex={-1}
                 aria-label={key === "BACKSPACE" ? "Backspace" : key}
                 onClick={() => onKey(key)}
-                className={`flex h-12 items-center justify-center rounded-[var(--radius-tile)] border text-sm font-semibold uppercase transition-[transform,background-color,color] duration-100 active:scale-90 ${
-                  isAction ? "px-3.5 text-xs" : "w-8 sm:w-10"
+                className={`flex h-12 items-center justify-center rounded-[var(--radius-tile)] border text-sm font-normal uppercase transition-[transform,background-color,color] duration-100 active:scale-90 ${
+                  isAction ? "px-3.5 text-xs font-semibold" : "w-8 sm:w-10"
                 } ${tone}`}
               >
                 {key === "BACKSPACE" ? (

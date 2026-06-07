@@ -360,7 +360,7 @@ export function HangmanGame({
                       tabIndex={-1}
                       disabled={outcome !== "unused"}
                       onClick={() => tryLetter(letter)}
-                      className={`flex h-12 w-8 items-center justify-center rounded-[var(--radius-tile)] border text-sm font-semibold transition-[transform,background-color,color] duration-100 active:scale-90 disabled:cursor-default sm:w-10 ${tone}`}
+                      className={`flex h-12 w-8 items-center justify-center rounded-[var(--radius-tile)] border text-sm font-normal transition-[transform,background-color,color] duration-100 active:scale-90 disabled:cursor-default sm:w-10 ${tone}`}
                     >
                       {letter}
                     </button>
