@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Check, Heart, Star, X } from "@phosphor-icons/react";
+import { Check, Heart, Star, X } from "@phosphor-icons/react";
 import type { Locale } from "@/lib/game/types";
 import type { Dictionary } from "@/i18n/dictionaries";
 import type { WordEntry } from "@/lib/words/types";
@@ -17,6 +17,7 @@ import { normalizeWord } from "@/lib/game/normalize";
 import { hangmanScore } from "@/lib/game/score";
 import { hangmanShareText } from "@/lib/game/share";
 import { ShareButton } from "@/components/ShareButton";
+import { GameTimer } from "@/components/GameTimer";
 
 type Labels = Dictionary["dailyPlay"];
 
@@ -39,13 +40,13 @@ type SavedGame = {
 export function HangmanGame({
   entry,
   labels,
-  backHref,
+  rules,
   locale,
   isAuthed,
 }: {
   entry: WordEntry;
   labels: Labels;
-  backHref: string;
+  rules: string;
   locale: Locale;
   isAuthed: boolean;
 }) {
@@ -55,6 +56,7 @@ export function HangmanGame({
   const [lastGuess, setLastGuess] = useState<string | null>(null);
   const [alreadyPlayed, setAlreadyPlayed] = useState(false);
   const [resultTimeMs, setResultTimeMs] = useState(0);
+  const [startedAt, setStartedAt] = useState(0);
   const finished = state.status !== "in_progress";
   const startRef = useRef(0);
   const timeRef = useRef(0);
@@ -106,7 +108,9 @@ export function HangmanGame({
       timeRef.current = 0;
       syncedRef.current = false;
       savedRef.current = false;
-      startRef.current = Date.now();
+      const now = Date.now();
+      startRef.current = now;
+      setStartedAt(now);
     }
     setLastGuess(null);
   }, [entry.word, storageKey]);
@@ -146,9 +150,10 @@ export function HangmanGame({
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
+        mode: "daily",
         locale,
         success: state.status === "won",
-        mistakes: state.mistakes,
+        attempts: state.mistakes,
         timeMs: timeRef.current,
       }),
     })
@@ -232,16 +237,12 @@ export function HangmanGame({
 
   return (
     <main className="mx-auto flex w-full max-w-xl flex-1 flex-col px-5 py-6">
-      <Link
-        href={backHref}
-        className="inline-flex items-center gap-1.5 self-start text-sm font-semibold text-accent-strong transition-colors hover:text-accent"
-      >
-        <ArrowLeft size={16} weight="bold" />
-        {labels.back}
-      </Link>
+      <h1 className="text-xl font-bold tracking-tight text-ink">{labels.title}</h1>
 
-      <div className="animate-rise relative mt-4 rounded-[var(--radius-card)] border border-edge bg-card px-6 pb-16 pt-7 text-center sm:px-10">
-        <h1 className="sr-only">{labels.title}</h1>
+      <div className="animate-rise relative mt-3 rounded-[var(--radius-card)] border border-edge bg-card px-6 pb-10 pt-7 text-center sm:px-10">
+        <div className="absolute right-4 top-4 sm:right-6">
+          <GameTimer running={!finished} startAt={startedAt} frozenMs={resultTimeMs} />
+        </div>
 
         {/* Hint */}
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent-strong">
@@ -371,14 +372,9 @@ export function HangmanGame({
           </div>
         )}
 
-        {/* Cursive wordmark (decorative) */}
-        <div
-          aria-hidden
-          className="font-title pointer-events-none absolute inset-x-0 bottom-3 text-4xl leading-none text-accent/35"
-        >
-          Vindle
-        </div>
       </div>
+
+      <p className="mt-4 px-1 text-sm leading-relaxed text-ink-soft">{rules}</p>
     </main>
   );
 }

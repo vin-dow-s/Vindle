@@ -24,7 +24,7 @@ export default async function DailyPage({
     <HangmanGame
       entry={entry}
       labels={dict.dailyPlay}
-      backHref={`/${locale}`}
+      rules={dict.help.dailyBody}
       locale={locale}
       isAuthed={!!user}
     />

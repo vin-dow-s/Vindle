@@ -6,6 +6,7 @@ export const fr = {
     leaderboard: "Classement",
     login: "Connexion",
     home: "Accueil",
+    profile: "Profil",
   },
   home: {
     chooseMode: "Choisis un mode",
@@ -27,7 +28,9 @@ export const fr = {
   },
   wordle: {
     title: "Wordle",
-    practiceNote: "Mode practice — rejoue autant que tu veux.",
+    dailyNote: "Un mot par jour, le même pour tous.",
+    comeBack: "Reviens demain pour un nouveau mot !",
+    signInToSave: "Connecte-toi pour enregistrer ton score",
     enter: "Entrer",
     won: "Bravo !",
     lost: "Perdu !",
@@ -90,6 +93,22 @@ export const fr = {
     emptyAllTime: "Pas encore de scores. Lance-toi !",
     signInPrompt: "Connecte-toi pour apparaître au classement.",
     back: "Retour",
+  },
+  help: {
+    title: "Comment jouer",
+    dailyTitle: "Mot du jour",
+    dailyBody:
+      "Devine le mot à partir de l'indice. Clique les lettres : les bonnes se révèlent, les mauvaises coûtent une vie. 5 vies, une partie par jour.",
+    wordleTitle: "Wordle",
+    wordleBody:
+      "Devine le mot en 6 essais. Après chaque essai : vert = bien placé, jaune = présent mais mal placé, gris = absent.",
+    scoreTitle: "Score",
+    scoreBody:
+      "Victoire = 1000 + 150 par vie restante + un bonus de vitesse (jusqu'à 300, −1 par seconde). Plus tu gagnes vite et avec peu d'erreurs, plus tu marques. Défaite = 0.",
+    boardTitle: "Classement",
+    boardBody:
+      "Un classement par mode et par langue — du jour et général. Connecte-toi (ou crée un compte) pour y apparaître.",
+    close: "Fermer",
   },
 };
 

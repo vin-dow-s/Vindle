@@ -1,6 +1,4 @@
-import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { ArrowLeft } from "@phosphor-icons/react/dist/ssr";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { getUser } from "@/lib/supabase/auth";
@@ -23,19 +21,8 @@ export default async function LoginPage({
 
   return (
     <main className="mx-auto flex w-full max-w-md flex-1 flex-col px-5 py-8">
-      <Link
-        href={`/${locale}`}
-        className="inline-flex items-center gap-1.5 self-start text-sm font-semibold text-accent-strong transition-colors hover:text-accent"
-      >
-        <ArrowLeft size={16} weight="bold" />
-        {dict.nav.home}
-      </Link>
-
-      <div className="animate-rise mt-6 rounded-[var(--radius-card)] border border-edge bg-card p-7">
-        <h1 className="font-title text-3xl leading-none text-accent-strong">
-          {dict.appName}
-        </h1>
-        <h2 className="mt-4 text-xl font-semibold text-ink">{dict.auth.loginTitle}</h2>
+      <div className="animate-rise mt-2 rounded-[var(--radius-card)] border border-edge bg-card p-7">
+        <h1 className="text-xl font-semibold text-ink">{dict.auth.loginTitle}</h1>
         <p className="mb-6 mt-1 text-sm text-ink-soft">{dict.auth.loginSubtitle}</p>
         <LoginForm locale={locale} labels={dict.auth} />
       </div>

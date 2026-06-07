@@ -1,13 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  ArrowRight,
-  GridNine,
-  Heart,
-  SignIn,
-  Trophy,
-} from "@phosphor-icons/react/dist/ssr";
-import { locales, isLocale } from "@/i18n/config";
+import { ArrowRight, GridNine, Heart } from "@phosphor-icons/react/dist/ssr";
+import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 
 // Decorative drifting hearts (behind content, non-interactive).
@@ -55,48 +49,8 @@ export default async function Home({
       </div>
 
       <div className="relative z-10">
-        {/* Top bar */}
-        <div className="flex items-center justify-between gap-3">
-          <Link
-            href={`/${locale}/leaderboard`}
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-strong transition-colors hover:text-accent"
-          >
-            <Trophy size={16} weight="duotone" />
-            {dict.nav.leaderboard}
-          </Link>
-
-          <div className="flex items-center gap-2.5">
-            <Link
-              href={`/${locale}/login`}
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-strong transition-colors hover:text-accent"
-            >
-              <SignIn size={16} weight="bold" />
-              {dict.auth.signIn}
-            </Link>
-            <div
-              className="inline-flex items-center rounded-full border border-edge bg-card/70 p-0.5 text-xs font-bold"
-              aria-label="Language"
-            >
-              {locales.map((l) => (
-                <Link
-                  key={l}
-                  href={`/${l}`}
-                  aria-current={l === locale ? "page" : undefined}
-                  className={`rounded-full px-2.5 py-1 uppercase tracking-wide transition-colors ${
-                    l === locale
-                      ? "bg-accent text-white"
-                      : "text-ink-soft hover:text-accent-strong"
-                  }`}
-                >
-                  {l}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-
         {/* Hero */}
-        <header className="mt-10 sm:mt-12">
+        <header className="mt-4 sm:mt-6">
           <h1
             className="animate-rise font-title text-[clamp(2.5rem,8.5vw,4.25rem)] leading-[0.85] text-accent-strong"
             style={{ "--i": 0 } as React.CSSProperties}
@@ -115,7 +69,7 @@ export default async function Home({
         <Link
           href={`/${locale}/play/daily`}
           style={{ "--i": 2 } as React.CSSProperties}
-          className="animate-rise group relative mt-8 block overflow-hidden rounded-[var(--radius-card)] bg-accent-strong p-7 text-white shadow-[0_28px_60px_-30px_var(--accent)] transition-transform duration-[260ms] [transition-timing-function:var(--ease-out-quart)] hover:-translate-y-1 sm:p-9"
+          className="animate-rise group relative mt-8 block overflow-hidden rounded-[var(--radius-card)] bg-accent-strong p-7 text-white shadow-[0_28px_60px_-30px_var(--accent)] transition-transform duration-[260ms] [transition-timing-function:var(--ease-out-quart)] hover:-translate-y-1 active:scale-[0.985] sm:p-9"
         >
           <Heart
             aria-hidden
@@ -148,14 +102,14 @@ export default async function Home({
         <Link
           href={`/${locale}/play/wordle`}
           style={{ "--i": 3 } as React.CSSProperties}
-          className="animate-rise group mt-4 block rounded-[var(--radius-card)] border border-edge bg-card p-6 transition-all duration-[260ms] [transition-timing-function:var(--ease-out-quart)] hover:-translate-y-1 hover:border-accent sm:max-w-md"
+          className="animate-rise group mt-4 block rounded-[var(--radius-card)] border border-edge bg-card p-6 transition-all duration-[260ms] [transition-timing-function:var(--ease-out-quart)] hover:-translate-y-1 hover:border-accent active:scale-[0.985] sm:max-w-md"
         >
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold tracking-tight text-ink">
               {dict.home.wordle.title}
             </h2>
             <span className="rounded-full bg-accent-tint px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-accent-strong">
-              {dict.home.practiceBadge}
+              {dict.home.newBadge}
             </span>
           </div>
           <p className="mt-2 max-w-[34ch] text-sm leading-relaxed text-ink-soft">

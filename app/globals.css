@@ -73,6 +73,13 @@ button:not(:disabled) {
   cursor: pointer;
 }
 
+/* Snappy taps on mobile (kills the ~300ms click delay). */
+a,
+button,
+[role="button"] {
+  touch-action: manipulation;
+}
+
 /* Cursive "Vindle" wordmark */
 .font-title {
   font-family: var(--font-alex-brush), cursive;

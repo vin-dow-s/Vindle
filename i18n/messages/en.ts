@@ -8,6 +8,7 @@ export const en: Dictionary = {
     leaderboard: "Leaderboard",
     login: "Sign in",
     home: "Home",
+    profile: "Profile",
   },
   home: {
     chooseMode: "Choose a mode",
@@ -29,7 +30,9 @@ export const en: Dictionary = {
   },
   wordle: {
     title: "Wordle",
-    practiceNote: "Practice mode — play as many times as you like.",
+    dailyNote: "One word a day, the same for everyone.",
+    comeBack: "Come back tomorrow for a new word!",
+    signInToSave: "Sign in to save your score",
     enter: "Enter",
     won: "Well done!",
     lost: "Game over",
@@ -92,5 +95,21 @@ export const en: Dictionary = {
     emptyAllTime: "No scores yet. Get started!",
     signInPrompt: "Sign in to appear on the leaderboard.",
     back: "Back",
+  },
+  help: {
+    title: "How to play",
+    dailyTitle: "Word of the day",
+    dailyBody:
+      "Guess the word from the clue. Tap letters: correct ones reveal, wrong ones cost a life. 5 lives, one game a day.",
+    wordleTitle: "Wordle",
+    wordleBody:
+      "Guess the word in 6 tries. After each guess: green = right spot, yellow = in the word but wrong spot, grey = not in the word.",
+    scoreTitle: "Score",
+    scoreBody:
+      "Win = 1000 + 150 per remaining life + a speed bonus (up to 300, −1 per second). The faster you win with fewer mistakes, the more you score. Loss = 0.",
+    boardTitle: "Leaderboard",
+    boardBody:
+      "One ranking per mode and per language — today's and all-time. Sign in (or create an account) to appear on it.",
+    close: "Close",
   },
 };

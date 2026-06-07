@@ -1,13 +1,14 @@
 import { notFound } from "next/navigation";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
-import { pickWordleAnswer } from "@/lib/words/wordle";
+import { dailyWordleAnswer } from "@/lib/words/wordle";
+import { getUser } from "@/lib/supabase/auth";
 import { WordleGame } from "@/components/wordle/WordleGame";
 
-// Practice mode is never cached: each request picks a fresh sample word.
+// Resolve today's deterministic word at request time.
 export const dynamic = "force-dynamic";
 
-export default async function WordlePracticePage({
+export default async function WordleDailyPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -16,14 +17,16 @@ export default async function WordlePracticePage({
   if (!isLocale(locale)) notFound();
 
   const dict = getDictionary(locale);
-  const answer = pickWordleAnswer(locale);
+  const answer = dailyWordleAnswer(locale);
+  const user = await getUser();
 
   return (
     <WordleGame
       answer={answer}
       locale={locale}
       labels={dict.wordle}
-      backHref={`/${locale}`}
+      rules={dict.help.wordleBody}
+      isAuthed={!!user}
     />
   );
 }
