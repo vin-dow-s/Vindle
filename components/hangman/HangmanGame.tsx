@@ -37,18 +37,26 @@ type SavedGame = {
   synced: boolean;
 };
 
+type ServerResult = {
+  success: boolean;
+  attempts: number;
+  time_ms: number | null;
+} | null;
+
 export function HangmanGame({
   entry,
   labels,
   rules,
   locale,
   isAuthed,
+  serverResult,
 }: {
   entry: WordEntry;
   labels: Labels;
   rules: string;
   locale: Locale;
   isAuthed: boolean;
+  serverResult: ServerResult;
 }) {
   const [state, setState] = useState(() =>
     createHangmanState(entry.word, { maxMistakes: MAX_MISTAKES }),
@@ -101,6 +109,22 @@ export function HangmanGame({
       timeRef.current = restored.timeMs ?? 0;
       syncedRef.current = restored.synced ?? false;
       savedRef.current = true;
+    } else if (serverResult) {
+      // Already played today on another device (synced to this account): lock it
+      // by reconstructing the finished state from the server result.
+      const reveal = Array.from(new Set(answer.split("")));
+      setState({
+        answer,
+        guessed: reveal,
+        mistakes: serverResult.attempts,
+        maxMistakes: MAX_MISTAKES,
+        status: serverResult.success ? "won" : "lost",
+      });
+      setResultTimeMs(serverResult.time_ms ?? 0);
+      setAlreadyPlayed(true);
+      timeRef.current = serverResult.time_ms ?? 0;
+      syncedRef.current = true;
+      savedRef.current = true;
     } else {
       setState(createHangmanState(entry.word, { maxMistakes: MAX_MISTAKES }));
       setResultTimeMs(0);
@@ -113,7 +137,7 @@ export function HangmanGame({
       setStartedAt(now);
     }
     setLastGuess(null);
-  }, [entry.word, storageKey]);
+  }, [entry.word, storageKey, serverResult]);
 
   // On a fresh finish: persist the result (so the day is locked) + record time.
   useEffect(() => {

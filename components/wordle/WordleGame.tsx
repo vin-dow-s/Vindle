@@ -29,18 +29,26 @@ type SavedGame = {
   synced: boolean;
 };
 
+type ServerResult = {
+  success: boolean;
+  attempts: number;
+  time_ms: number | null;
+} | null;
+
 export function WordleGame({
   answer,
   locale,
   labels,
   rules,
   isAuthed,
+  serverResult,
 }: {
   answer: string;
   locale: Locale;
   labels: Labels;
   rules: string;
   isAuthed: boolean;
+  serverResult: ServerResult;
 }) {
   const config = DEFAULT_WORDLE_CONFIG;
 
@@ -89,6 +97,13 @@ export function WordleGame({
       setResultTimeMs(restored.timeMs ?? 0);
       timeRef.current = restored.timeMs ?? 0;
       syncedRef.current = restored.synced ?? false;
+      savedRef.current = true;
+    } else if (serverResult) {
+      // This account already played today (on another device) — lock it.
+      setState({ ...config, guesses: [], status: serverResult.success ? "won" : "lost" });
+      setResultTimeMs(serverResult.time_ms ?? 0);
+      timeRef.current = serverResult.time_ms ?? 0;
+      syncedRef.current = true;
       savedRef.current = true;
     } else {
       setState(createWordleState(config));
@@ -240,10 +255,13 @@ export function WordleGame({
     return () => window.removeEventListener("keydown", handler);
   }, [press]);
 
+  // Account already played today (synced from another device): we have the
+  // result but not the guesses, so hide the board/share.
+  const remoteOnly = finished && state.guesses.length === 0;
   const score = finished
     ? wordleScore({
         success: state.status === "won",
-        attempts: state.guesses.length,
+        attempts: remoteOnly ? (serverResult?.attempts ?? 0) : state.guesses.length,
         maxAttempts: config.maxAttempts,
         timeMs: resultTimeMs,
       })
@@ -264,18 +282,20 @@ export function WordleGame({
         <div className="absolute right-4 top-4 sm:right-6">
           <GameTimer running={!finished} startAt={startedAt} frozenMs={resultTimeMs} />
         </div>
-        <p className="mb-6 text-xs font-medium uppercase tracking-wide text-ink-faint">
+        <p className="mb-6 hidden text-xs font-medium uppercase tracking-wide text-ink-faint sm:block">
           {labels.dailyNote}
         </p>
 
-        <div className="flex flex-col items-center gap-6">
-          <WordleBoard
-            guesses={state.guesses}
-            current={current}
-            answerLength={config.answerLength}
-            maxAttempts={config.maxAttempts}
-            shake={shake}
-          />
+        <div className="flex flex-col items-center gap-2 sm:gap-6">
+          {!remoteOnly && (
+            <WordleBoard
+              guesses={state.guesses}
+              current={current}
+              answerLength={config.answerLength}
+              maxAttempts={config.maxAttempts}
+              shake={shake}
+            />
+          )}
 
           <div role="status" aria-live="polite" className="h-6 text-sm font-semibold">
             {finished ? (
@@ -295,11 +315,13 @@ export function WordleGame({
                 <Star size={16} weight="fill" />
                 {score}
               </div>
-              <ShareButton
-                text={wordleShareText(state, { title: labels.title })}
-                label={labels.share}
-                copiedLabel={labels.copied}
-              />
+              {!remoteOnly && (
+                <ShareButton
+                  text={wordleShareText(state, { title: labels.title })}
+                  label={labels.share}
+                  copiedLabel={labels.copied}
+                />
+              )}
               {!isAuthed && (
                 <Link
                   href={`/${locale}/login`}
