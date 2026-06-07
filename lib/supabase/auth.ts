@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { createClient } from "./server";
 
 export interface Profile {
@@ -9,17 +10,18 @@ export interface Profile {
   is_premium: boolean;
 }
 
-/** The authenticated user (validated against Supabase), or null. */
-export async function getUser() {
+/** The authenticated user (validated against Supabase), or null.
+ *  Memoized per request so layout + page share a single auth round-trip. */
+export const getUser = cache(async () => {
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
   return user;
-}
+});
 
 /** The current user's profile row, or null if signed out. */
-export async function getProfile(): Promise<Profile | null> {
+export const getProfile = cache(async (): Promise<Profile | null> => {
   const user = await getUser();
   if (!user) return null;
   const supabase = await createClient();
@@ -29,4 +31,4 @@ export async function getProfile(): Promise<Profile | null> {
     .eq("id", user.id)
     .single();
   return data as Profile | null;
-}
+});

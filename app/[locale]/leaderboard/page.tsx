@@ -169,8 +169,8 @@ async function AllTimeBoard({
           {rows.map((r, i) => (
             <li key={i} className="flex items-center justify-between gap-3 py-2.5 text-sm">
               <span className="flex min-w-0 items-center gap-3">
-                <span className="w-5 text-right font-bold tabular-nums text-ink-faint">
-                  {i + 1}
+                <span className="w-6 text-center text-base font-bold tabular-nums text-ink-faint">
+                  {i < 3 ? ["🥇", "🥈", "🥉"][i] : i + 1}
                 </span>
                 <span className="truncate font-semibold text-ink">{displayName(r)}</span>
               </span>

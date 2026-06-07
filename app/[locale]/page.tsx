@@ -58,7 +58,7 @@ export default async function Home({
         <Link
           href={`/${locale}/play/daily`}
           style={{ "--i": 2 } as React.CSSProperties}
-          className="animate-rise group relative mt-8 block overflow-hidden rounded-[var(--radius-card)] bg-accent-strong p-7 text-white shadow-[0_28px_60px_-30px_var(--accent)] transition-transform duration-[260ms] [transition-timing-function:var(--ease-out-quart)] hover:-translate-y-1 active:scale-[0.985] sm:p-9"
+          className="animate-rise group relative mt-4 block overflow-hidden rounded-[var(--radius-card)] bg-accent-strong p-7 text-white shadow-[0_28px_60px_-30px_var(--accent)] transition-transform duration-[260ms] [transition-timing-function:var(--ease-out-quart)] hover:-translate-y-1 active:scale-[0.985] sm:p-9"
         >
           <Heart
             aria-hidden

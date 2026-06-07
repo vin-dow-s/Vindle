@@ -16,6 +16,7 @@ import { wordleScore } from "@/lib/game/score";
 import { wordleShareText } from "@/lib/game/share";
 import { ShareButton } from "@/components/ShareButton";
 import { GameTimer } from "@/components/GameTimer";
+import { EndGameRank } from "@/components/EndGameRank";
 import { WordleBoard } from "./WordleBoard";
 import { Keyboard } from "./Keyboard";
 
@@ -286,7 +287,7 @@ export function WordleGame({
           {labels.dailyNote}
         </p>
 
-        <div className="flex flex-col items-center gap-2 sm:gap-6">
+        <div className="mt-4 flex flex-col items-center gap-2 sm:mt-0 sm:gap-6">
           {!remoteOnly && (
             <WordleBoard
               guesses={state.guesses}
@@ -315,6 +316,12 @@ export function WordleGame({
                 <Star size={16} weight="fill" />
                 {score}
               </div>
+              <EndGameRank
+                mode="wordle"
+                locale={locale}
+                score={score}
+                claimLabel={labels.claimSpot}
+              />
               {!remoteOnly && (
                 <ShareButton
                   text={wordleShareText(state, { title: labels.title })}

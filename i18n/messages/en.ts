@@ -34,6 +34,7 @@ export const en: Dictionary = {
     dailyNote: "One word a day, the same for everyone.",
     comeBack: "Come back tomorrow for a new word!",
     signInToSave: "Sign in to save your score",
+    claimSpot: "Sign in to claim this spot",
     enter: "Enter",
     won: "Well done!",
     lost: "Game over",
@@ -60,6 +61,7 @@ export const en: Dictionary = {
     share: "Share",
     copied: "Copied!",
     signInToSave: "Sign in to save your score",
+    claimSpot: "Sign in to claim this spot",
     scoreSaved: "Score saved!",
   },
   auth: {

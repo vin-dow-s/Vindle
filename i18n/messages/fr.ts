@@ -32,6 +32,7 @@ export const fr = {
     dailyNote: "Un mot par jour, le même pour tous.",
     comeBack: "Reviens demain pour un nouveau mot !",
     signInToSave: "Connecte-toi pour enregistrer ton score",
+    claimSpot: "Connecte-toi pour réclamer cette place",
     enter: "Entrer",
     won: "Bravo !",
     lost: "Perdu !",
@@ -58,6 +59,7 @@ export const fr = {
     share: "Partager",
     copied: "Copié !",
     signInToSave: "Connecte-toi pour enregistrer ton score",
+    claimSpot: "Connecte-toi pour réclamer cette place",
     scoreSaved: "Score enregistré !",
   },
   auth: {

@@ -18,6 +18,7 @@ import { hangmanScore } from "@/lib/game/score";
 import { hangmanShareText } from "@/lib/game/share";
 import { ShareButton } from "@/components/ShareButton";
 import { GameTimer } from "@/components/GameTimer";
+import { EndGameRank } from "@/components/EndGameRank";
 
 type Labels = Dictionary["dailyPlay"];
 
@@ -368,6 +369,12 @@ export function HangmanGame({
               <Star size={16} weight="fill" />
               {score}
             </div>
+            <EndGameRank
+              mode="daily"
+              locale={locale}
+              score={score}
+              claimLabel={labels.claimSpot}
+            />
             <ShareButton
               text={hangmanShareText(state, {
                 title: labels.title,
