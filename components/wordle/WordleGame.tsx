@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { Star } from "@phosphor-icons/react";
+import { ArrowLeft, Star } from "@phosphor-icons/react";
 import type { GuessResult, Locale } from "@/lib/game/types";
 import type { Dictionary } from "@/i18n/dictionaries";
 import {
@@ -251,7 +251,14 @@ export function WordleGame({
 
   return (
     <main className="mx-auto flex w-full max-w-lg flex-1 flex-col px-5 py-8">
-      <h1 className="text-xl font-bold tracking-tight text-ink">{labels.title}</h1>
+      <Link
+        href={`/${locale}`}
+        className="inline-flex items-center gap-1.5 self-start text-sm font-semibold text-accent-strong transition-[transform,color] duration-150 hover:text-accent active:scale-95"
+      >
+        <ArrowLeft size={16} weight="bold" />
+        {labels.back}
+      </Link>
+      <h1 className="mt-3 text-xl font-bold tracking-tight text-ink">{labels.title}</h1>
 
       <div className="animate-rise relative mt-3 rounded-[var(--radius-card)] border border-edge bg-card px-5 py-7 text-center sm:px-8">
         <div className="absolute right-4 top-4 sm:right-6">

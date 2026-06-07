@@ -13,6 +13,7 @@ export const en: Dictionary = {
   home: {
     chooseMode: "Choose a mode",
     soon: "Soon",
+    gamesTitle: "Games",
     newBadge: "New",
     practiceBadge: "Practice",
     daily: {

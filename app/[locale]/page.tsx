@@ -49,21 +49,10 @@ export default async function Home({
       </div>
 
       <div className="relative z-10">
-        {/* Hero */}
-        <header className="mt-4 sm:mt-6">
-          <h1
-            className="animate-rise font-title text-[clamp(2.5rem,8.5vw,4.25rem)] leading-[0.85] text-accent-strong"
-            style={{ "--i": 0 } as React.CSSProperties}
-          >
-            Vindle
-          </h1>
-          <p
-            className="animate-rise mt-2 max-w-md text-base text-ink-soft"
-            style={{ "--i": 1 } as React.CSSProperties}
-          >
-            {dict.tagline}
-          </p>
-        </header>
+        {/* Section title */}
+        <h1 className="animate-rise mt-4 text-2xl font-bold tracking-tight text-ink sm:mt-6">
+          {dict.home.gamesTitle}
+        </h1>
 
         {/* Featured card — "Mot du jour" owns the page */}
         <Link

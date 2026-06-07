@@ -11,6 +11,7 @@ export const fr = {
   home: {
     chooseMode: "Choisis un mode",
     soon: "Bientôt",
+    gamesTitle: "Jeux",
     newBadge: "Nouveau",
     practiceBadge: "Practice",
     daily: {
