@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+/* ════════════════════════════════════════════════════════════════════════
+   Vindle design tokens
+   Brand hue ≈ 295 (lavender-violet). Game-feedback colors are the EXACT
+   originals (#008000 / #8a8686 / #d2afff); everything else is OKLCH, tinted
+   toward the brand hue for quiet cohesion.
+   ════════════════════════════════════════════════════════════════════════ */
+:root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --bg: #dcd0ff; /* signature lavender field (exact) */
+  --bg-2: oklch(0.905 0.045 295); /* deeper lavender for gradients/depth */
+  --card: oklch(0.995 0.005 300); /* near-white card, a whisper of lavender */
+  --edge: #d2afff; /* purple tile / card border (exact) */
+
+  /* Ink (never pure black) */
+  --ink: oklch(0.29 0.035 295);
+  --ink-soft: oklch(0.47 0.03 295);
+  --ink-faint: oklch(0.62 0.025 295);
+
+  /* Accent */
+  --accent: oklch(0.52 0.2 293);
+  --accent-strong: oklch(0.45 0.21 293);
+  --accent-tint: oklch(0.94 0.035 295);
+
+  /* Game feedback (exact original) */
+  --correct: #008000;
+  --absent: #8a8686;
+  --present: oklch(0.79 0.13 86); /* warm gold; paired with dark ink text for AA contrast */
+  --danger: oklch(0.55 0.2 25);
+
+  /* Motion */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 120ms;
+  --dur-mid: 260ms;
+  --dur-slow: 480ms;
+
+  /* Radius */
+  --radius-card: 22px;
+  --radius-tile: 9px;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-card: var(--card);
+  --color-edge: var(--edge);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-tint: var(--accent-tint);
+  --color-correct: var(--correct);
+  --color-absent: var(--absent);
+  --color-present: var(--present);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-poppins);
+}
+
+body {
+  background:
+    radial-gradient(120% 80% at 50% -10%, var(--bg-2) 0%, transparent 55%),
+    var(--bg);
+  background-attachment: fixed;
+  color: var(--ink);
+}
+
+/* Cursive "Vindle" wordmark */
+.font-title {
+  font-family: var(--font-alex-brush), cursive;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* Focus ring (keyboard only) */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Keyframes ──────────────────────────────────────────────────────────── */
+@keyframes vindle-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vindle-tile-flip {
+  0% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes vindle-pop {
+  0% {
+    transform: scale(0.55);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes vindle-shake {
+  10%,
+  90% {
+    transform: translateX(-1px);
+  }
+  20%,
+  80% {
+    transform: translateX(2px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-4px);
+  }
+  40%,
+  60% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes heartMove {
+  0% {
+    transform: translateY(-10vh) rotate(var(--rot-start, 0deg));
+  }
+  100% {
+    transform: translateY(110vh) rotate(var(--rot-end, 20deg));
+  }
+}
+
+/* Gentle ambient drift for the decorative background hearts on the home. */
+@keyframes vindle-drift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--r, 0deg));
+  }
+  50% {
+    transform: translateY(-14px) rotate(var(--r, 0deg));
+  }
+}
+
+/* ── Utilities ──────────────────────────────────────────────────────────── */
+.animate-rise {
+  opacity: 0;
+  animation: vindle-rise var(--dur-slow) var(--ease-out-expo) forwards;
+  animation-delay: calc(var(--i, 0) * 70ms);
+}
+
+.animate-pop {
+  animation: vindle-pop 180ms var(--ease-out-quart);
+}
+
+.tile-flip {
+  animation: vindle-tile-flip 420ms var(--ease-out-quart) both;
+  animation-delay: calc(var(--col, 0) * 150ms);
+}
+
+.vindle-shake {
+  animation: vindle-shake 0.4s ease-in-out;
+}
+
+.heart {
+  position: absolute;
+  top: -10vh;
+  width: 26px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  animation: heartMove linear 1;
+}
+
+.float-heart {
+  animation: vindle-drift var(--d, 7s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .animate-rise {
+    opacity: 1;
+  }
+}

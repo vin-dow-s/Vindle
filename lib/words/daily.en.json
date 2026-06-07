@@ -1,0 +1,1462 @@
+[
+  {
+    "word": "ephemeral",
+    "definition": "Lasting for only a very short time."
+  },
+  {
+    "word": "serendipity",
+    "definition": "A fortunate discovery made entirely by chance."
+  },
+  {
+    "word": "petrichor",
+    "definition": "The pleasant smell of rain falling on dry earth."
+  },
+  {
+    "word": "ineffable",
+    "definition": "Too great or extreme to be expressed in words."
+  },
+  {
+    "word": "limpid",
+    "definition": "Perfectly clear and transparent."
+  },
+  {
+    "word": "quixotic",
+    "definition": "Wildly idealistic and gloriously impractical."
+  },
+  {
+    "word": "ubiquitous",
+    "definition": "Seeming to be present everywhere at once."
+  },
+  {
+    "word": "halcyon",
+    "definition": "Calm, peaceful, and happy."
+  },
+  {
+    "word": "eloquent",
+    "definition": "Fluent and persuasive in speech or writing."
+  },
+  {
+    "word": "resilience",
+    "definition": "The ability to recover quickly from difficulty."
+  },
+  {
+    "word": "luminous",
+    "definition": "Giving off or reflecting a soft, bright light."
+  },
+  {
+    "word": "nostalgia",
+    "definition": "A sentimental longing for the past."
+  },
+  {
+    "word": "paradigm",
+    "definition": "A typical example or model of something."
+  },
+  {
+    "word": "ethereal",
+    "definition": "Delicate and light in a way that seems unworldly."
+  },
+  {
+    "word": "obsolete",
+    "definition": "No longer in use; out of date."
+  },
+  {
+    "word": "epiphany",
+    "definition": "A sudden and striking moment of realization."
+  },
+  {
+    "word": "frugal",
+    "definition": "Sparing and economical with money or resources."
+  },
+  {
+    "word": "verbose",
+    "definition": "Using far more words than are needed."
+  },
+  {
+    "word": "taciturn",
+    "definition": "Reserved in nature and saying very little."
+  },
+  {
+    "word": "panacea",
+    "definition": "A supposed remedy for every problem or disease."
+  },
+  {
+    "word": "quagmire",
+    "definition": "A difficult, tangled situation hard to escape."
+  },
+  {
+    "word": "lucid",
+    "definition": "Clear and easy to understand; thinking sharply."
+  },
+  {
+    "word": "zenith",
+    "definition": "The highest point reached by something."
+  },
+  {
+    "word": "nadir",
+    "definition": "The lowest point of a situation or fortune."
+  },
+  {
+    "word": "candor",
+    "definition": "Open, honest, and sincere expression."
+  },
+  {
+    "word": "wistful",
+    "definition": "Full of quiet, yearning sadness."
+  },
+  {
+    "word": "eclectic",
+    "definition": "Drawn from a broad and diverse range of sources."
+  },
+  {
+    "word": "tenacious",
+    "definition": "Holding firmly; persistent and determined."
+  },
+  {
+    "word": "vivid",
+    "definition": "Producing strong, clear images in the mind."
+  },
+  {
+    "word": "solace",
+    "definition": "Comfort or consolation in a time of distress."
+  },
+  {
+    "word": "mellifluous",
+    "definition": "Sweet and smooth, pleasing to hear."
+  },
+  {
+    "word": "incognito",
+    "definition": "Acting with one's true identity concealed."
+  },
+  {
+    "word": "glacier",
+    "definition": "A slowly moving mass of ice formed from compacted snow on mountains or near the poles."
+  },
+  {
+    "word": "empathy",
+    "definition": "The ability to share and understand the feelings of another person."
+  },
+  {
+    "word": "allegory",
+    "definition": "A story whose characters and events stand for hidden moral or political meanings."
+  },
+  {
+    "word": "lantern",
+    "definition": "A portable case with transparent sides used to carry a flame or bulb and shed light in the dark."
+  },
+  {
+    "word": "avalanche",
+    "definition": "A large amount of snow that suddenly slides down the side of a mountain."
+  },
+  {
+    "word": "yearning",
+    "definition": "A deep and intense longing for something or someone."
+  },
+  {
+    "word": "metaphor",
+    "definition": "A figure of speech that describes one thing as if it were another."
+  },
+  {
+    "word": "kettle",
+    "definition": "A metal container with a spout, used on a stove to boil water for tea or coffee."
+  },
+  {
+    "word": "tundra",
+    "definition": "A vast treeless plain in cold regions where the subsoil stays permanently frozen."
+  },
+  {
+    "word": "melancholy",
+    "definition": "A lingering, thoughtful sadness with no obvious cause."
+  },
+  {
+    "word": "simile",
+    "definition": "A comparison of two unlike things using the words like or as."
+  },
+  {
+    "word": "mattress",
+    "definition": "A large padded pad placed on a bed frame to sleep on comfortably."
+  },
+  {
+    "word": "savanna",
+    "definition": "A flat grassy plain with scattered trees, typical of warm tropical regions."
+  },
+  {
+    "word": "euphoria",
+    "definition": "An overwhelming feeling of intense happiness and excitement."
+  },
+  {
+    "word": "alliteration",
+    "definition": "The repetition of the same initial sound across nearby words."
+  },
+  {
+    "word": "cupboard",
+    "definition": "An enclosed piece of furniture with shelves and doors for storing dishes or food."
+  },
+  {
+    "word": "estuary",
+    "definition": "The wide mouth of a river where fresh water meets and mixes with the salty sea."
+  },
+  {
+    "word": "apathy",
+    "definition": "A lack of interest, concern, or emotion toward anything."
+  },
+  {
+    "word": "assonance",
+    "definition": "The echoing of similar vowel sounds within neighbouring words."
+  },
+  {
+    "word": "saucepan",
+    "definition": "A deep round cooking vessel with a long handle, used on the stove to heat liquids."
+  },
+  {
+    "word": "peninsula",
+    "definition": "A strip of land almost entirely surrounded by water but joined to a larger landmass."
+  },
+  {
+    "word": "anguish",
+    "definition": "Severe mental or physical suffering and distress."
+  },
+  {
+    "word": "onomatopoeia",
+    "definition": "A word that imitates the natural sound it describes."
+  },
+  {
+    "word": "doorknob",
+    "definition": "The rounded handle you turn to open the entrance to a room."
+  },
+  {
+    "word": "archipelago",
+    "definition": "A group or chain of many small islands scattered across the sea."
+  },
+  {
+    "word": "elation",
+    "definition": "A feeling of great joy and triumphant high spirits."
+  },
+  {
+    "word": "hyperbole",
+    "definition": "Deliberate exaggeration used for emphasis or comic effect."
+  },
+  {
+    "word": "chimney",
+    "definition": "A vertical shaft that carries smoke from a fireplace up and out of a building."
+  },
+  {
+    "word": "volcano",
+    "definition": "A mountain with an opening through which molten rock, ash, and gas may erupt."
+  },
+  {
+    "word": "remorse",
+    "definition": "Deep regret and guilt for a wrong one has committed."
+  },
+  {
+    "word": "irony",
+    "definition": "A contrast between what is said and what is actually meant."
+  },
+  {
+    "word": "curtain",
+    "definition": "A piece of hanging fabric that covers a window for privacy or to block light."
+  },
+  {
+    "word": "crater",
+    "definition": "A large bowl-shaped hollow at the top of a mountain or where a meteorite has struck."
+  },
+  {
+    "word": "compassion",
+    "definition": "Sympathetic concern combined with a wish to ease another's suffering."
+  },
+  {
+    "word": "satire",
+    "definition": "Writing that ridicules folly or vice to provoke reform."
+  },
+  {
+    "word": "pillow",
+    "definition": "A soft cushion that supports the head while resting or sleeping."
+  },
+  {
+    "word": "canyon",
+    "definition": "A deep narrow valley with steep rocky sides, often carved by a river."
+  },
+  {
+    "word": "loathing",
+    "definition": "A feeling of intense dislike or disgust toward someone."
+  },
+  {
+    "word": "parody",
+    "definition": "A comic imitation that mocks the style of an original work."
+  },
+  {
+    "word": "blanket",
+    "definition": "A large warm covering spread over a bed or body for comfort against cold."
+  },
+  {
+    "word": "plateau",
+    "definition": "A broad area of high flat land raised sharply above the surrounding country."
+  },
+  {
+    "word": "serenity",
+    "definition": "A state of being calm, peaceful, and untroubled."
+  },
+  {
+    "word": "sonnet",
+    "definition": "A fourteen-line poem following a strict rhyme scheme."
+  },
+  {
+    "word": "faucet",
+    "definition": "The fixture that releases water when you turn it on at a sink or basin."
+  },
+  {
+    "word": "meadow",
+    "definition": "A field of grass and wildflowers, often used for grazing or hay."
+  },
+  {
+    "word": "jealousy",
+    "definition": "Resentful suspicion that a rival may take what one cherishes."
+  },
+  {
+    "word": "haiku",
+    "definition": "A tiny Japanese verse of seventeen syllables on three lines."
+  },
+  {
+    "word": "drawer",
+    "definition": "A sliding compartment in a desk or cabinet that holds small items."
+  },
+  {
+    "word": "marsh",
+    "definition": "Low soft wet ground that is frequently flooded and dominated by grasses and reeds."
+  },
+  {
+    "word": "gratitude",
+    "definition": "A warm sense of thankfulness for kindness received."
+  },
+  {
+    "word": "ballad",
+    "definition": "A narrative song or poem often passed down by oral tradition."
+  },
+  {
+    "word": "ladder",
+    "definition": "A frame of two long sides joined by rungs, climbed to reach high places."
+  },
+  {
+    "word": "lagoon",
+    "definition": "A shallow stretch of salt water separated from the open sea by a reef or sandbank."
+  },
+  {
+    "word": "dread",
+    "definition": "Anticipating something with great fear or anxiety."
+  },
+  {
+    "word": "elegy",
+    "definition": "A mournful poem written in memory of someone who has died."
+  },
+  {
+    "word": "basket",
+    "definition": "A woven container with an open top, used to carry or hold goods."
+  },
+  {
+    "word": "reef",
+    "definition": "A ridge of rock or coral lying near the surface of the sea."
+  },
+  {
+    "word": "contentment",
+    "definition": "A quiet satisfaction with what one has in life."
+  },
+  {
+    "word": "sestet",
+    "definition": "A group of six lines closing certain fourteen-line poems."
+  },
+  {
+    "word": "mirror",
+    "definition": "A smooth reflective surface that shows an image of whatever stands before it."
+  },
+  {
+    "word": "geyser",
+    "definition": "A natural hot spring that periodically shoots a column of boiling water into the air."
+  },
+  {
+    "word": "despair",
+    "definition": "The complete loss or absence of hope."
+  },
+  {
+    "word": "stanza",
+    "definition": "A grouped set of lines forming a unit within a poem."
+  },
+  {
+    "word": "napkin",
+    "definition": "A small cloth or paper square used at meals to wipe the mouth and hands."
+  },
+  {
+    "word": "cavern",
+    "definition": "A large underground hollow chamber, usually formed in rock."
+  },
+  {
+    "word": "affection",
+    "definition": "A gentle feeling of fondness and tenderness toward another."
+  },
+  {
+    "word": "verse",
+    "definition": "Writing arranged with rhythm and often rhyme."
+  },
+  {
+    "word": "spatula",
+    "definition": "A flat broad kitchen utensil used to flip or spread food while cooking."
+  },
+  {
+    "word": "summit",
+    "definition": "The highest point or very top of a hill or mountain."
+  },
+  {
+    "word": "resentment",
+    "definition": "Bitter indignation at having been treated unfairly."
+  },
+  {
+    "word": "prose",
+    "definition": "Ordinary written language without metrical structure."
+  },
+  {
+    "word": "colander",
+    "definition": "A perforated bowl used to drain water from washed or boiled food."
+  },
+  {
+    "word": "ravine",
+    "definition": "A small deep narrow gorge cut into the ground by running water."
+  },
+  {
+    "word": "trepidation",
+    "definition": "A nervous feeling of fear about something that may happen."
+  },
+  {
+    "word": "narrative",
+    "definition": "A connected account of events told as a story."
+  },
+  {
+    "word": "thimble",
+    "definition": "A small protective cap worn on a fingertip while pushing a needle through cloth."
+  },
+  {
+    "word": "delta",
+    "definition": "A triangular area of deposited soil where a river splits into branches before the sea."
+  },
+  {
+    "word": "rapture",
+    "definition": "An intense and overwhelming feeling of delight or bliss."
+  },
+  {
+    "word": "protagonist",
+    "definition": "The central character around whom a story revolves."
+  },
+  {
+    "word": "corkscrew",
+    "definition": "A spiral metal tool that pulls the stopper out of a wine bottle."
+  },
+  {
+    "word": "isthmus",
+    "definition": "A narrow neck of land connecting two larger pieces of land across water."
+  },
+  {
+    "word": "sorrow",
+    "definition": "Deep distress caused by loss or disappointment."
+  },
+  {
+    "word": "antagonist",
+    "definition": "The character who opposes the hero of a story."
+  },
+  {
+    "word": "whisk",
+    "definition": "A looped wire tool used to beat eggs or cream until frothy."
+  },
+  {
+    "word": "glade",
+    "definition": "An open grassy clearing surrounded by trees in a wood."
+  },
+  {
+    "word": "envy",
+    "definition": "Discontented longing for what another person possesses."
+  },
+  {
+    "word": "denouement",
+    "definition": "The final part where the threads of a plot are resolved."
+  },
+  {
+    "word": "shovel",
+    "definition": "A broad-bladed digging tool with a long handle for moving earth or snow."
+  },
+  {
+    "word": "prairie",
+    "definition": "A wide expanse of flat or rolling treeless grassland, especially in North America."
+  },
+  {
+    "word": "humility",
+    "definition": "A modest view of one's own importance or abilities."
+  },
+  {
+    "word": "climax",
+    "definition": "The moment of greatest tension in a dramatic work."
+  },
+  {
+    "word": "hammer",
+    "definition": "A hand tool with a heavy head used to drive nails into wood."
+  },
+  {
+    "word": "oasis",
+    "definition": "A fertile spot in a desert where water allows plants to grow."
+  },
+  {
+    "word": "arrogance",
+    "definition": "An offensive display of superiority and self-importance."
+  },
+  {
+    "word": "prologue",
+    "definition": "An introductory section that opens a literary work."
+  },
+  {
+    "word": "chisel",
+    "definition": "A sharp-edged tool struck to cut or shape wood, stone, or metal."
+  },
+  {
+    "word": "dune",
+    "definition": "A mound or ridge of sand shaped and shifted by the wind."
+  },
+  {
+    "word": "tenderness",
+    "definition": "Gentleness and warmth shown in feeling or behavior."
+  },
+  {
+    "word": "epilogue",
+    "definition": "A closing section added after the main story ends."
+  },
+  {
+    "word": "wrench",
+    "definition": "A tool with jaws used to grip and turn bolts and nuts."
+  },
+  {
+    "word": "boulder",
+    "definition": "A very large rounded rock, often carried far from its origin."
+  },
+  {
+    "word": "frustration",
+    "definition": "The annoyed feeling of being blocked from a goal."
+  },
+  {
+    "word": "preface",
+    "definition": "An author's opening note explaining the aim of a book."
+  },
+  {
+    "word": "pliers",
+    "definition": "A gripping hand tool with two hinged jaws for holding or bending small things."
+  },
+  {
+    "word": "pebble",
+    "definition": "A small smooth stone worn round by the action of water."
+  },
+  {
+    "word": "curiosity",
+    "definition": "A strong desire to learn or know about something."
+  },
+  {
+    "word": "anthology",
+    "definition": "A collection of selected writings by various authors."
+  },
+  {
+    "word": "drill",
+    "definition": "A power tool that bores round holes into walls or wood."
+  },
+  {
+    "word": "mineral",
+    "definition": "A naturally occurring solid substance dug from the ground, such as quartz or salt."
+  },
+  {
+    "word": "indifference",
+    "definition": "A complete lack of interest, sympathy, or concern."
+  },
+  {
+    "word": "memoir",
+    "definition": "An account of personal experiences written by oneself."
+  },
+  {
+    "word": "trowel",
+    "definition": "A small flat-bladed tool used for digging in gardens or spreading mortar."
+  },
+  {
+    "word": "crystal",
+    "definition": "A solid whose atoms are arranged in a regular repeating pattern, often with flat faces."
+  },
+  {
+    "word": "optimism",
+    "definition": "A hopeful confidence that things will turn out well."
+  },
+  {
+    "word": "fable",
+    "definition": "A short tale, often with animals, that teaches a lesson."
+  },
+  {
+    "word": "anvil",
+    "definition": "A heavy iron block on which a smith hammers and shapes hot metal."
+  },
+  {
+    "word": "sediment",
+    "definition": "Tiny particles of matter that settle and sink to the bottom of a liquid."
+  },
+  {
+    "word": "pessimism",
+    "definition": "A tendency to expect the worst possible outcome."
+  },
+  {
+    "word": "parable",
+    "definition": "A simple story used to illustrate a spiritual truth."
+  },
+  {
+    "word": "compass",
+    "definition": "A device with a magnetic needle that always points toward the north."
+  },
+  {
+    "word": "erosion",
+    "definition": "The gradual wearing away of land by wind, water, or ice."
+  },
+  {
+    "word": "bewilderment",
+    "definition": "A state of confusion and total puzzlement."
+  },
+  {
+    "word": "legend",
+    "definition": "A traditional tale popularly believed but unverified."
+  },
+  {
+    "word": "bucket",
+    "definition": "A round open container with a handle, used to carry water or sand."
+  },
+  {
+    "word": "fossil",
+    "definition": "The preserved remains or trace of a creature that lived long ago, found in rock."
+  },
+  {
+    "word": "exuberance",
+    "definition": "Lively, energetic, and unrestrained enthusiasm."
+  },
+  {
+    "word": "myth",
+    "definition": "An ancient story explaining the world through gods and heroes."
+  },
+  {
+    "word": "funnel",
+    "definition": "A cone-shaped utensil that guides liquid into a narrow opening without spilling."
+  },
+  {
+    "word": "magma",
+    "definition": "Hot molten rock found beneath the surface of the earth."
+  },
+  {
+    "word": "stoicism",
+    "definition": "The endurance of hardship without showing feelings or complaint."
+  },
+  {
+    "word": "saga",
+    "definition": "A long heroic tale of adventure spanning generations."
+  },
+  {
+    "word": "plunger",
+    "definition": "A rubber cup on a stick used to clear a blocked drain."
+  },
+  {
+    "word": "lava",
+    "definition": "Melted rock that flows out of an erupting mountain and then hardens."
+  },
+  {
+    "word": "introspection",
+    "definition": "The careful examination of one's own thoughts and feelings."
+  },
+  {
+    "word": "epic",
+    "definition": "A grand narrative poem recounting heroic deeds."
+  },
+  {
+    "word": "toaster",
+    "definition": "A small appliance that browns slices of bread with heated coils."
+  },
+  {
+    "word": "quartz",
+    "definition": "A hard, glassy mineral made of silicon and oxygen, common in many rocks."
+  },
+  {
+    "word": "infatuation",
+    "definition": "A short-lived but intense passion or admiration for someone."
+  },
+  {
+    "word": "lyric",
+    "definition": "A short poem expressing deep personal emotion."
+  },
+  {
+    "word": "blender",
+    "definition": "An electric appliance with spinning blades that purees fruit and other foods."
+  },
+  {
+    "word": "granite",
+    "definition": "A very hard speckled stone often used for buildings and monuments."
+  },
+  {
+    "word": "betrayal",
+    "definition": "The act of breaking trust by disloyalty or deception."
+  },
+  {
+    "word": "rhyme",
+    "definition": "A correspondence of sound between word endings."
+  },
+  {
+    "word": "carpenter",
+    "definition": "A skilled worker who builds and repairs things made of wood."
+  },
+  {
+    "word": "marble",
+    "definition": "A smooth metamorphic stone, often white with swirling veins, prized by sculptors."
+  },
+  {
+    "word": "devotion",
+    "definition": "Deep love, loyalty, and dedication to a person or cause."
+  },
+  {
+    "word": "meter",
+    "definition": "The measured rhythmic pattern of stressed syllables in poetry."
+  },
+  {
+    "word": "plumber",
+    "definition": "A tradesperson who installs and fixes pipes and water systems in buildings."
+  },
+  {
+    "word": "thunder",
+    "definition": "The loud rumbling sound that follows a flash of lightning during a storm."
+  },
+  {
+    "word": "anxiety",
+    "definition": "A persistent feeling of worry, nervousness, or unease."
+  },
+  {
+    "word": "cadence",
+    "definition": "The rise and fall of the voice in speech or music."
+  },
+  {
+    "word": "blacksmith",
+    "definition": "A craftsperson who forges objects from iron and steel over a hot fire."
+  },
+  {
+    "word": "lightning",
+    "definition": "A sudden bright flash of electricity discharged between clouds or to the ground."
+  },
+  {
+    "word": "exhilaration",
+    "definition": "A feeling of lively, breathless excitement and joy."
+  },
+  {
+    "word": "rhetoric",
+    "definition": "The art of effective and persuasive speaking or writing."
+  },
+  {
+    "word": "surgeon",
+    "definition": "A doctor trained to perform operations by cutting into the body."
+  },
+  {
+    "word": "hurricane",
+    "definition": "A violent rotating tropical storm with extremely strong winds and heavy rain."
+  },
+  {
+    "word": "vindictive",
+    "definition": "Having a strong desire for revenge against another."
+  },
+  {
+    "word": "oratory",
+    "definition": "The skill of delivering powerful formal speeches."
+  },
+  {
+    "word": "architect",
+    "definition": "A professional who designs buildings and oversees how they are constructed."
+  },
+  {
+    "word": "tornado",
+    "definition": "A rapidly spinning column of air that touches the ground and destroys what it meets."
+  },
+  {
+    "word": "benevolent",
+    "definition": "Kind, generous, and wishing to do good to others."
+  },
+  {
+    "word": "diction",
+    "definition": "The choice and clarity of words in speech or writing."
+  },
+  {
+    "word": "librarian",
+    "definition": "A person who manages a collection of books and helps visitors find them."
+  },
+  {
+    "word": "blizzard",
+    "definition": "A severe snowstorm with strong winds and very poor visibility."
+  },
+  {
+    "word": "callous",
+    "definition": "Showing a cruel disregard for the feelings of others."
+  },
+  {
+    "word": "syntax",
+    "definition": "The arrangement of words to form well-formed sentences."
+  },
+  {
+    "word": "cobbler",
+    "definition": "A craftsperson who makes and mends shoes by hand."
+  },
+  {
+    "word": "drizzle",
+    "definition": "Very fine light rain that falls slowly and steadily."
+  },
+  {
+    "word": "amiable",
+    "definition": "Having a friendly and pleasant manner toward people."
+  },
+  {
+    "word": "grammar",
+    "definition": "The system of rules governing how a language works."
+  },
+  {
+    "word": "jeweler",
+    "definition": "A person who makes, sells, or repairs rings, necklaces, and gems."
+  },
+  {
+    "word": "hailstone",
+    "definition": "A small ball of ice that falls from storm clouds."
+  },
+  {
+    "word": "petulant",
+    "definition": "Childishly sulky or bad-tempered over small annoyances."
+  },
+  {
+    "word": "lexicon",
+    "definition": "The complete vocabulary of a language or field."
+  },
+  {
+    "word": "barber",
+    "definition": "A tradesperson who cuts and styles hair, mainly for men."
+  },
+  {
+    "word": "rainbow",
+    "definition": "A curved band of colours in the sky caused by sunlight passing through water droplets."
+  },
+  {
+    "word": "gregarious",
+    "definition": "Fond of company and enjoying the presence of others."
+  },
+  {
+    "word": "vocabulary",
+    "definition": "The whole body of words known or used by a person."
+  },
+  {
+    "word": "tailor",
+    "definition": "A person who makes or alters garments to fit a customer."
+  },
+  {
+    "word": "breeze",
+    "definition": "A gentle and pleasant movement of air."
+  },
+  {
+    "word": "reclusive",
+    "definition": "Avoiding the company of others and living in seclusion."
+  },
+  {
+    "word": "etymology",
+    "definition": "The study of the origin and history of words."
+  },
+  {
+    "word": "butcher",
+    "definition": "A tradesperson who cuts and sells meat."
+  },
+  {
+    "word": "frost",
+    "definition": "A thin white coating of ice crystals that forms on cold surfaces overnight."
+  },
+  {
+    "word": "stubborn",
+    "definition": "Refusing to change one's mind despite good reasons."
+  },
+  {
+    "word": "dialect",
+    "definition": "A regional variety of a language with its own features."
+  },
+  {
+    "word": "sailor",
+    "definition": "A person whose work is operating or serving aboard a ship."
+  },
+  {
+    "word": "humidity",
+    "definition": "The amount of water vapour present in the air."
+  },
+  {
+    "word": "diligent",
+    "definition": "Showing careful and persistent effort in one's work."
+  },
+  {
+    "word": "vernacular",
+    "definition": "The everyday spoken language of ordinary people."
+  },
+  {
+    "word": "farmer",
+    "definition": "A person who grows crops and raises animals for a living."
+  },
+  {
+    "word": "drought",
+    "definition": "A long period of unusually dry weather with little or no rain."
+  },
+  {
+    "word": "haughty",
+    "definition": "Behaving in a proud and scornfully superior way."
+  },
+  {
+    "word": "idiom",
+    "definition": "A phrase whose meaning cannot be guessed from its words."
+  },
+  {
+    "word": "plumage",
+    "definition": "The full covering of feathers on a bird."
+  },
+  {
+    "word": "monsoon",
+    "definition": "A seasonal wind that brings heavy rains to southern Asia."
+  },
+  {
+    "word": "earnest",
+    "definition": "Sincere and serious in intention and effort."
+  },
+  {
+    "word": "proverb",
+    "definition": "A short well-known saying expressing a general truth."
+  },
+  {
+    "word": "vinegar",
+    "definition": "A sour liquid made by fermentation, used to flavor or preserve food."
+  },
+  {
+    "word": "tempest",
+    "definition": "A violent windy storm, especially at sea."
+  },
+  {
+    "word": "fickle",
+    "definition": "Changing one's loyalties or feelings without good reason."
+  },
+  {
+    "word": "maxim",
+    "definition": "A brief statement of a guiding rule of conduct."
+  },
+  {
+    "word": "cinnamon",
+    "definition": "A sweet brown spice made from the dried bark of a tropical tree."
+  },
+  {
+    "word": "overcast",
+    "definition": "Describing a sky completely covered with grey clouds."
+  },
+  {
+    "word": "gullible",
+    "definition": "Easily fooled or deceived because of being too trusting."
+  },
+  {
+    "word": "aphorism",
+    "definition": "A pithy observation containing a wise insight."
+  },
+  {
+    "word": "almond",
+    "definition": "A pale oval nut often eaten raw or used in baking."
+  },
+  {
+    "word": "forecast",
+    "definition": "A prediction of what the weather will be like in the coming days."
+  },
+  {
+    "word": "audacious",
+    "definition": "Showing a willingness to take bold and surprising risks."
+  },
+  {
+    "word": "anecdote",
+    "definition": "A brief amusing account of a real incident."
+  },
+  {
+    "word": "biscuit",
+    "definition": "A small baked treat that is usually crisp and sweet."
+  },
+  {
+    "word": "cyclone",
+    "definition": "A large system of winds rotating around a centre of low pressure."
+  },
+  {
+    "word": "timid",
+    "definition": "Lacking courage and easily frightened or shy."
+  },
+  {
+    "word": "synonym",
+    "definition": "A word with the same meaning as another."
+  },
+  {
+    "word": "pumpkin",
+    "definition": "A large round orange gourd often carved or baked into pie."
+  },
+  {
+    "word": "galaxy",
+    "definition": "A vast system of stars, gas, and dust held together by gravity."
+  },
+  {
+    "word": "meticulous",
+    "definition": "Showing great attention to fine detail and precision."
+  },
+  {
+    "word": "antonym",
+    "definition": "A word opposite in meaning to another."
+  },
+  {
+    "word": "cabbage",
+    "definition": "A round leafy vegetable with tightly packed green or purple leaves."
+  },
+  {
+    "word": "comet",
+    "definition": "An icy body that travels around the sun and grows a glowing tail when it nears it."
+  },
+  {
+    "word": "impulsive",
+    "definition": "Acting suddenly without thinking about the consequences."
+  },
+  {
+    "word": "pseudonym",
+    "definition": "A false name adopted by a writer instead of the real one."
+  },
+  {
+    "word": "lentil",
+    "definition": "A small flat dried seed cooked in soups and stews."
+  },
+  {
+    "word": "asteroid",
+    "definition": "A small rocky body that orbits the sun, mostly between two planets."
+  },
+  {
+    "word": "cantankerous",
+    "definition": "Bad-tempered, argumentative, and difficult to deal with."
+  },
+  {
+    "word": "prologise",
+    "definition": "To deliver an introductory speech before a performance."
+  },
+  {
+    "word": "honey",
+    "definition": "A thick sweet golden substance made by bees from flower nectar."
+  },
+  {
+    "word": "meteor",
+    "definition": "A streak of light caused by a small space rock burning as it enters the atmosphere."
+  },
+  {
+    "word": "magnanimous",
+    "definition": "Generous and forgiving, especially toward a rival."
+  },
+  {
+    "word": "soliloquy",
+    "definition": "A speech in which a character voices thoughts while alone on stage."
+  },
+  {
+    "word": "yogurt",
+    "definition": "A thick creamy food made by fermenting milk with bacteria."
+  },
+  {
+    "word": "nebula",
+    "definition": "A huge cloud of gas and dust in space where new stars are sometimes born."
+  },
+  {
+    "word": "obstinate",
+    "definition": "Stubbornly refusing to change a position or opinion."
+  },
+  {
+    "word": "monologue",
+    "definition": "A long speech delivered by one performer."
+  },
+  {
+    "word": "oatmeal",
+    "definition": "A warm breakfast porridge made by boiling rolled grain in liquid."
+  },
+  {
+    "word": "orbit",
+    "definition": "The curved path one object follows around another in space."
+  },
+  {
+    "word": "gracious",
+    "definition": "Polite, kind, and pleasant in dealings with others."
+  },
+  {
+    "word": "dialogue",
+    "definition": "A conversation exchanged between two or more characters."
+  },
+  {
+    "word": "pastry",
+    "definition": "A baked dough of flour and fat used for pies and sweet treats."
+  },
+  {
+    "word": "eclipse",
+    "definition": "The blocking of light when one heavenly body passes in front of another."
+  },
+  {
+    "word": "petrified",
+    "definition": "So frightened that one is unable to move or think."
+  },
+  {
+    "word": "tragedy",
+    "definition": "A serious drama ending in disaster for the main figure."
+  },
+  {
+    "word": "custard",
+    "definition": "A soft sweet dessert made from eggs, milk, and sugar."
+  },
+  {
+    "word": "satellite",
+    "definition": "An object that travels around a planet, whether natural or built by people."
+  },
+  {
+    "word": "jovial",
+    "definition": "Cheerful, good-humored, and full of friendly warmth."
+  },
+  {
+    "word": "comedy",
+    "definition": "A light, amusing work designed to entertain and end happily."
+  },
+  {
+    "word": "saffron",
+    "definition": "A costly golden spice made from the dried stigmas of a flower."
+  },
+  {
+    "word": "constellation",
+    "definition": "A pattern of stars in the sky given a recognizable name."
+  },
+  {
+    "word": "sullen",
+    "definition": "Silently bad-tempered, gloomy, and resentful."
+  },
+  {
+    "word": "drama",
+    "definition": "A composition meant to be performed by actors on a stage."
+  },
+  {
+    "word": "walnut",
+    "definition": "A wrinkled edible nut enclosed in a hard round shell."
+  },
+  {
+    "word": "gravity",
+    "definition": "The invisible force that pulls objects toward one another and keeps us on the ground."
+  },
+  {
+    "word": "vivacious",
+    "definition": "Attractively lively, spirited, and full of energy."
+  },
+  {
+    "word": "playwright",
+    "definition": "A person who writes works for the theatre."
+  },
+  {
+    "word": "apricot",
+    "definition": "A small soft orange fruit with a single hard stone inside."
+  },
+  {
+    "word": "telescope",
+    "definition": "An instrument that makes distant objects appear larger and closer."
+  },
+  {
+    "word": "morose",
+    "definition": "Gloomy, ill-humored, and unwilling to talk."
+  },
+  {
+    "word": "theatre",
+    "definition": "A building or art form devoted to live dramatic performance."
+  },
+  {
+    "word": "radish",
+    "definition": "A small crisp peppery root vegetable usually eaten raw in salads."
+  },
+  {
+    "word": "cosmos",
+    "definition": "The whole universe seen as an ordered and harmonious whole."
+  },
+  {
+    "word": "affable",
+    "definition": "Easy to talk to and warm in manner."
+  },
+  {
+    "word": "rehearsal",
+    "definition": "A practice session held before a public performance."
+  },
+  {
+    "word": "meteorite",
+    "definition": "A piece of rock from space that has fallen and landed on the ground."
+  },
+  {
+    "word": "brazen",
+    "definition": "Boldly shameless and without any sense of embarrassment."
+  },
+  {
+    "word": "ensemble",
+    "definition": "A group of performers who work together as a unit."
+  },
+  {
+    "word": "molecule",
+    "definition": "The smallest unit of a substance made of two or more joined atoms."
+  },
+  {
+    "word": "demure",
+    "definition": "Reserved, modest, and shy in manner or appearance."
+  },
+  {
+    "word": "chorus",
+    "definition": "A group that comments on the action in ancient drama or repeats a refrain."
+  },
+  {
+    "word": "atom",
+    "definition": "The tiny basic building block from which all ordinary matter is made."
+  },
+  {
+    "word": "fervent",
+    "definition": "Showing intense and passionate feeling about something."
+  },
+  {
+    "word": "refrain",
+    "definition": "A line or phrase repeated throughout a song."
+  },
+  {
+    "word": "integrity",
+    "definition": "The quality of being honest and holding firmly to strong moral principles."
+  },
+  {
+    "word": "electron",
+    "definition": "A tiny negatively charged particle that circles the nucleus of an atom."
+  },
+  {
+    "word": "languid",
+    "definition": "Pleasantly lazy, slow, and lacking in energy."
+  },
+  {
+    "word": "melody",
+    "definition": "A sequence of single notes forming a recognisable tune."
+  },
+  {
+    "word": "wisdom",
+    "definition": "Sound judgment gained through deep knowledge and long experience."
+  },
+  {
+    "word": "gene",
+    "definition": "A unit of heredity passed from parents to offspring that determines a trait."
+  },
+  {
+    "word": "wary",
+    "definition": "Cautious and watchful about possible danger or trouble."
+  },
+  {
+    "word": "harmony",
+    "definition": "Notes sounded together to create a pleasing blend."
+  },
+  {
+    "word": "courage",
+    "definition": "The strength to face danger or difficulty without being overcome by fear."
+  },
+  {
+    "word": "enzyme",
+    "definition": "A protein that speeds up chemical reactions inside living things."
+  },
+  {
+    "word": "zealous",
+    "definition": "Filled with eager and uncompromising devotion to a cause."
+  },
+  {
+    "word": "rhythm",
+    "definition": "The pattern of beats that drives a piece of music."
+  },
+  {
+    "word": "patience",
+    "definition": "The calm capacity to wait or endure delay without becoming upset."
+  },
+  {
+    "word": "bacteria",
+    "definition": "Tiny single-celled organisms, some helpful and some causing disease."
+  },
+  {
+    "word": "sheepish",
+    "definition": "Showing embarrassment from having done something foolish."
+  },
+  {
+    "word": "tempo",
+    "definition": "The speed at which a piece of music is played."
+  },
+  {
+    "word": "freedom",
+    "definition": "The state of being able to act and choose without external restraint."
+  },
+  {
+    "word": "oxygen",
+    "definition": "The colourless gas in the air that humans and animals need to breathe."
+  },
+  {
+    "word": "loyalty",
+    "definition": "Steadfast faithfulness and support toward a person or cause."
+  },
+  {
+    "word": "crescendo",
+    "definition": "A gradual increase in loudness within a passage of music."
+  },
+  {
+    "word": "justice",
+    "definition": "The fair treatment of people according to what is right and deserved."
+  },
+  {
+    "word": "hydrogen",
+    "definition": "The lightest chemical element, a gas that fuels the stars."
+  },
+  {
+    "word": "kinship",
+    "definition": "A natural feeling of closeness, often based on shared blood."
+  },
+  {
+    "word": "sonata",
+    "definition": "An instrumental composition in several contrasting movements."
+  },
+  {
+    "word": "friction",
+    "definition": "The resistance that one surface meets when rubbing against another."
+  },
+  {
+    "word": "rivalry",
+    "definition": "Ongoing competition between two parties for the same prize."
+  },
+  {
+    "word": "symphony",
+    "definition": "An elaborate work for full orchestra in several movements."
+  },
+  {
+    "word": "velocity",
+    "definition": "The speed of something moving in a particular direction."
+  },
+  {
+    "word": "intimacy",
+    "definition": "A close, warm familiarity and connection between people."
+  },
+  {
+    "word": "concerto",
+    "definition": "A composition for a solo instrument accompanied by orchestra."
+  },
+  {
+    "word": "ambition",
+    "definition": "A strong drive to achieve success, power, or distinction."
+  },
+  {
+    "word": "magnetism",
+    "definition": "The force by which certain metals attract or repel one another."
+  },
+  {
+    "word": "estrangement",
+    "definition": "The condition of becoming a stranger to someone once close."
+  },
+  {
+    "word": "overture",
+    "definition": "An orchestral piece opening an opera or large work."
+  },
+  {
+    "word": "loneliness",
+    "definition": "The painful state of feeling isolated and without companionship."
+  },
+  {
+    "word": "radiation",
+    "definition": "Energy that travels as waves or particles, such as heat or light from the sun."
+  },
+  {
+    "word": "companionship",
+    "definition": "The pleasant feeling of having someone alongside you."
+  },
+  {
+    "word": "opera",
+    "definition": "A dramatic work in which the story is sung throughout."
+  },
+  {
+    "word": "membrane",
+    "definition": "A thin flexible layer that surrounds or separates parts of a living organism."
+  },
+  {
+    "word": "forgiveness",
+    "definition": "The act of ceasing to feel anger toward an offender."
+  },
+  {
+    "word": "libretto",
+    "definition": "The complete text of words sung in a staged musical work."
+  },
+  {
+    "word": "sincerity",
+    "definition": "The quality of being genuine and free from pretense or deceit."
+  },
+  {
+    "word": "organism",
+    "definition": "Any living thing, whether a plant, an animal, or a microbe."
+  },
+  {
+    "word": "solidarity",
+    "definition": "Unity and mutual support among members of a group."
+  },
+  {
+    "word": "aria",
+    "definition": "An elaborate solo song within a larger sung drama."
+  },
+  {
+    "word": "oblivion",
+    "definition": "The state of being completely forgotten or unaware of one's surroundings."
+  },
+  {
+    "word": "skeleton",
+    "definition": "The framework of bones that supports and shapes a body."
+  },
+  {
+    "word": "rapport",
+    "definition": "A harmonious relationship of mutual understanding."
+  },
+  {
+    "word": "ballet",
+    "definition": "A formal dance performed with precise, graceful movements."
+  },
+  {
+    "word": "abundance",
+    "definition": "A very large or more than sufficient quantity of something."
+  },
+  {
+    "word": "muscle",
+    "definition": "A band of tissue in the body that contracts to produce movement."
+  },
+  {
+    "word": "camaraderie",
+    "definition": "A warm, trusting friendship shared among companions."
+  },
+  {
+    "word": "octave",
+    "definition": "The interval spanning eight steps of a musical scale."
+  },
+  {
+    "word": "tendon",
+    "definition": "A tough cord of tissue that joins a muscle to a bone."
+  },
+  {
+    "word": "alienation",
+    "definition": "The feeling of being isolated from a group one should belong to."
+  },
+  {
+    "word": "timbre",
+    "definition": "The distinctive tone quality of a voice or instrument."
+  },
+  {
+    "word": "artery",
+    "definition": "A vessel that carries blood away from the heart to the rest of the body."
+  },
+  {
+    "word": "fidelity",
+    "definition": "Faithfulness shown by steady support and devotion."
+  },
+  {
+    "word": "sculpture",
+    "definition": "A three-dimensional artwork carved or modelled from material."
+  },
+  {
+    "word": "intuition",
+    "definition": "The ability to understand something immediately without conscious reasoning."
+  },
+  {
+    "word": "lung",
+    "definition": "One of the two organs in the chest used for breathing."
+  }
+]

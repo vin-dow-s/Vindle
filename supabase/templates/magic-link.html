@@ -1,0 +1,86 @@
+<!--
+  Vindle — Magic Link email template.
+  Paste into Supabase → Authentication → Email Templates → "Magic Link" (Message body).
+  Suggested subject: Ta connexion à Vindle
+  Variable used: {{ .ConfirmationURL }} (and {{ .SiteURL }} in the footer).
+-->
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      /* Progressive enhancement — loads in clients that allow it (e.g. Apple Mail).
+         Everything degrades gracefully to the inline fallbacks below. */
+      @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:wght@400;600;700&display=swap");
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body style="margin:0; padding:0; background-color:#dcd0ff;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#dcd0ff;">
+      <tr>
+        <td align="center" style="padding:40px 16px;">
+          <!-- Card -->
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:480px; background-color:#ffffff; border-radius:22px;">
+            <tr>
+              <td style="padding:42px 36px; text-align:center; font-family:'Poppins',Arial,Helvetica,sans-serif;">
+                <!-- Wordmark (image — email clients block web fonts) -->
+                <img
+                  src="{{ .SiteURL }}/wordmark.png"
+                  alt="Vindle"
+                  width="210"
+                  style="display:block; width:210px; max-width:72%; height:auto; margin:0 auto; border:0;"
+                />
+                <div style="font-size:13px; color:#7a7197; margin-top:8px;">Le jeu de mots quotidien</div>
+
+                <!-- Heart -->
+                <div style="margin:26px 0 6px; color:#b69bff; font-size:22px;">&#9829;</div>
+
+                <h1 style="margin:10px 0 0; font-size:22px; font-weight:700; color:#1e1b2e;">
+                  Connexion à Vindle
+                </h1>
+                <p style="margin:12px 0 0; font-size:15px; line-height:1.6; color:#4a4360;">
+                  Clique sur le bouton pour te connecter — pas de mot de passe à retenir.
+                </p>
+
+                <!-- CTA -->
+                <table role="presentation" cellpadding="0" cellspacing="0" align="center" style="margin:28px auto 0;">
+                  <tr>
+                    <td align="center" bgcolor="#6b3fd4" style="border-radius:999px;">
+                      <a href="{{ .ConfirmationURL }}" target="_blank"
+                         style="display:inline-block; padding:14px 34px; font-family:'Poppins',Arial,sans-serif; font-size:15px; font-weight:600; color:#ffffff; text-decoration:none; border-radius:999px;">
+                        Me connecter
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+
+                <p style="margin:14px 0 0; font-size:12px; color:#8a85a0;">
+                  Sign in to Vindle — tap the button above.
+                </p>
+
+                <!-- Fallback link -->
+                <p style="margin:30px 0 0; font-size:12px; line-height:1.5; color:#8a85a0;">
+                  Si le bouton ne marche pas, copie-colle ce lien :<br />
+                  <a href="{{ .ConfirmationURL }}" style="color:#6b3fd4; word-break:break-all;">{{ .ConfirmationURL }}</a>
+                </p>
+
+                <p style="margin:24px 0 0; font-size:12px; color:#a8a3bd;">
+                  Ce lien expire bientôt. Si tu n'es pas à l'origine de cette demande, ignore cet e-mail.
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <!-- Footer -->
+          <div style="max-width:480px; margin:18px auto 0; font-family:'Poppins',Arial,Helvetica,sans-serif; font-size:11px; color:#8076a3;">
+            Vindle &nbsp;·&nbsp; <span style="color:#b69bff;">&#9829;</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
