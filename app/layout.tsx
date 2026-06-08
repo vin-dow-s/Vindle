@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     shortcut: "/heart.png",
     apple: "/heart.png",
   },
+  // The app is already bilingual (FR/EN via the toggle) — stop mobile browsers
+  // from auto-translating French content into the phone's language.
+  other: { google: "notranslate" },
 };
 
 export default function RootLayout({
@@ -34,7 +37,8 @@ export default function RootLayout({
   return (
     <html
       lang={defaultLocale}
-      className={`${poppins.variable} ${alexBrush.variable} h-full antialiased`}
+      translate="no"
+      className={`notranslate ${poppins.variable} ${alexBrush.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>

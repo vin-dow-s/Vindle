@@ -324,7 +324,7 @@ export function WordleGame({
               />
               {!remoteOnly && (
                 <ShareButton
-                  text={wordleShareText(state, { title: labels.title })}
+                  text={wordleShareText(state, { title: labels.title, locale })}
                   label={labels.share}
                   copiedLabel={labels.copied}
                 />

@@ -10,10 +10,10 @@ const STATE_EMOJI = {
 /** Classic Wordle-style emoji grid: "Vindle - Wordle 4/6\n🟩🟨⬜⬜⬜…". */
 export function wordleShareText(
   state: WordleState,
-  opts: { title: string; url?: string },
+  opts: { title: string; locale: string; url?: string },
 ): string {
   const score = state.status === "won" ? String(state.guesses.length) : "X";
-  const head = `Vindle - ${opts.title} ${score}/${state.maxAttempts}`;
+  const head = `Vindle - ${opts.title} [${opts.locale.toUpperCase()}] ${score}/${state.maxAttempts}`;
   const grid = state.guesses
     .map((g) => g.states.map((s) => STATE_EMOJI[s]).join(""))
     .join("\n");
@@ -27,11 +27,11 @@ export function wordleShareText(
  */
 export function hangmanShareText(
   state: HangmanState,
-  opts: { title: string; livesLabel: string; url?: string },
+  opts: { title: string; livesLabel: string; locale: string; url?: string },
 ): string {
   const lives = Math.max(0, state.maxMistakes - state.mistakes);
   const hearts = "❤️".repeat(lives) + "🖤".repeat(state.mistakes);
-  const head = `Vindle - ${opts.title} ${state.status === "won" ? "✅" : "❌"}`;
+  const head = `Vindle - ${opts.title} [${opts.locale.toUpperCase()}] ${state.status === "won" ? "✅" : "❌"}`;
   const line = `${lives} ${opts.livesLabel} ${hearts}`;
   return [head, line, opts.url].filter(Boolean).join("\n");
 }

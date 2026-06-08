@@ -379,6 +379,7 @@ export function HangmanGame({
               text={hangmanShareText(state, {
                 title: labels.title,
                 livesLabel: labels.livesLeft.toLowerCase(),
+                locale,
               })}
               label={labels.share}
               copiedLabel={labels.copied}
